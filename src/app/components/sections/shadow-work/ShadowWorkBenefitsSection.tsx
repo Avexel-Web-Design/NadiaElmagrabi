@@ -57,7 +57,7 @@ export default function ShadowWorkBenefitsSection() {
               alt="Shadow work journey"
               className="rounded-2xl shadow-xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent rounded-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-earth/20 to-transparent rounded-2xl"></div>
           </motion.div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import PLRFinalCTASection from '../components/sections/plr-ebook/PLRFinalCTASect
 
 export default function PLRSessionEBookPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen muted-spiritual">
       <PLRHeroSection />
       <PLRFeaturesSection />
       <ChapterBreakdownSection />

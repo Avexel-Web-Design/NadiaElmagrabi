@@ -23,7 +23,7 @@ export default function EmbodyFAQSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+    <section className="py-20 bg-cream/20 backdrop-blur-sm">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export default function EmbodyFAQSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-4">
             Frequently Asked Questions
           </h2>
         </motion.div>
@@ -45,10 +45,10 @@ export default function EmbodyFAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-lg shadow-lg"
+              className="bg-cream/80 backdrop-blur-sm p-6 rounded-lg divine-shadow mystical-border"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{faq.question}</h3>
-              <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              <h3 className="text-xl font-semibold sacred-text text-earth mb-3">{faq.question}</h3>
+              <p className="body-text text-earth/80 leading-relaxed">{faq.answer}</p>
             </motion.div>
           ))}
         </div>

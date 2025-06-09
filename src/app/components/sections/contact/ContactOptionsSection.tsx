@@ -89,16 +89,16 @@ export default function ContactOptionsSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center"
           >
-            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Instagram className="w-8 h-8 text-purple-600" />
+            <div className="bg-sage/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Instagram className="w-8 h-8 text-forest" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Instagram</h3>
-            <p className="text-gray-600 mb-4">Follow for daily inspiration and updates</p>
+            <h3 className="text-xl font-semibold sacred-text text-earth mb-2">Instagram</h3>
+            <p className="body-text text-earth/80 mb-4">Follow for daily inspiration and updates</p>
             <a
               href="https://instagram.com/nadiaelmagrabi"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-purple-600 text-white px-6 py-2 rounded-full font-medium hover:bg-purple-700 transition-colors duration-300"
+              className="bg-forest text-cream px-6 py-2 rounded-full font-medium sacred-text hover:bg-earth hover:text-cream/90 transition-all duration-300 divine-shadow"
             >
               Follow
             </a>

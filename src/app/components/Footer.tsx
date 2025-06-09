@@ -56,14 +56,14 @@ export default function Footer() {
             <div className="space-y-3">
               <Link 
                 href="https://calendly.com/nadiaelmagrabi/30min"
-                className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors"
+                className="flex items-center space-x-2 text-cream/70 hover:text-gold transition-colors body-text"
               >
                 <Phone className="w-4 h-4" />
                 <span>Book a Consultation</span>
               </Link>
               <Link 
                 href="/contact"
-                className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors"
+                className="flex items-center space-x-2 text-cream/70 hover:text-gold transition-colors body-text"
               >
                 <Mail className="w-4 h-4" />
                 <span>Contact Form</span>
@@ -73,10 +73,10 @@ export default function Footer() {
             {/* Newsletter Signup */}
             <div className="mt-6">
               <h4 className="font-semibold mb-2">Stay Connected</h4>
-              <p className="text-gray-300 text-sm mb-3">Get free resources and updates</p>
+              <p className="text-cream/70 text-sm mb-3 body-text">Get free resources and updates</p>
               <Link
                 href="/resources"
-                className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition-all duration-300 inline-block"
+                className="bg-gold text-forest px-4 py-2 rounded-full text-sm font-semibold sacred-text hover:bg-copper hover:text-cream transition-all duration-300 inline-block divine-shadow"
               >
                 Join Now
               </Link>
@@ -91,13 +91,13 @@ export default function Footer() {
               © 2025 Nadia Elmagrabi. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-purple-400 text-sm transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-gray-300 hover:text-purple-400 text-sm transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="text-cream/70 hover:text-gold text-sm body-text transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-cream/70 hover:text-gold text-sm body-text transition-colors">Terms of Service</Link>
             </div>
           </div>
           <div className="mt-4 text-center">
-            <p className="text-gray-400 text-xs">
-              Artwork by <Link href="https://www.ruthcisse.com/" className="text-purple-400 hover:text-purple-300">Ruthie Cisse</Link> | 
+            <p className="text-cream/60 text-xs body-text">
+              Artwork by <Link href="https://www.ruthcisse.com/" className="text-gold hover:text-copper">Ruthie Cisse</Link> | 
               Photography by Natalie Fons-Welke
             </p>
           </div>

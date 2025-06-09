@@ -7,7 +7,7 @@ import PodcastNewsletterSection from '../components/sections/podcasts/PodcastNew
 
 export default function PodcastsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen spiritual-gradient">
       <PodcastHeroSection />
       <PodcastStatsSection />
       <PodcastSubscribeSection />

@@ -4,7 +4,7 @@ import ContactFormSection from '../components/sections/contact/ContactFormSectio
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen muted-spiritual">
       <ContactHeroSection />
       <ContactOptionsSection />
       <ContactFormSection />

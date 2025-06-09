@@ -6,7 +6,7 @@ import ResourcesCTASection from '../components/sections/resources/ResourcesCTASe
 
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen nature-gradient">
       <ResourcesHeroSection />
       <FeaturedResourcesSection />
       <FreeResourcesSection />

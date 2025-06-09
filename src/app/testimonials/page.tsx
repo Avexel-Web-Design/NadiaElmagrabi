@@ -6,7 +6,7 @@ import TestimonialsCTASection from '../components/sections/testimonials/Testimon
 
 export default function TestimonialsPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen earth-gradient">
       <TestimonialsHeroSection />
       <TestimonialsStatsSection />
       <TestimonialsGridSection />

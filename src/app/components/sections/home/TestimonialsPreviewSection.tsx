@@ -65,7 +65,7 @@ export default function TestimonialsPreviewSection() {
         >
           <Link
             href="/testimonials"
-            className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors gap-2"
+            className="inline-flex items-center text-forest font-semibold sacred-text hover:text-earth transition-colors gap-2"
           >
             Read More Testimonials <ArrowRight className="w-4 h-4" />
           </Link>

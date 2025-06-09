@@ -6,7 +6,7 @@ import EmbodyFAQSection from '../components/sections/embody-souls-purpose/Embody
 
 export default function EmbodyYourSoulsPurpose() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50 pt-16">
+    <main className="min-h-screen earth-gradient pt-16">
       <EmbodyHeroSection />
       <ModalitiesSection />
       <BenefitsSection />

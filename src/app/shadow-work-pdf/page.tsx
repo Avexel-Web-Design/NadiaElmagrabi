@@ -7,7 +7,7 @@ import ShadowWorkCTASection from '../components/sections/shadow-work/ShadowWorkC
 
 export default function ShadowWorkPDFPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen spiritual-gradient">
       <ShadowWorkHeroSection />
       <WhatsInsideSection />
       <ShadowWorkBenefitsSection />

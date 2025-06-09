@@ -130,74 +130,74 @@ export default function ContactFormSection() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Contact Information</h2>
+              <h2 className="text-3xl font-bold sacred-text text-forest mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                    <Mail className="w-6 h-6 text-purple-600" />
+                  <div className="bg-sage/20 p-3 rounded-lg mr-4">
+                    <Mail className="w-6 h-6 text-forest" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Email</h3>
-                    <p className="text-gray-600">nadia@nadiaelmagrabi.com</p>
-                    <p className="text-sm text-gray-500 mt-1">I respond within 24 hours</p>
+                    <h3 className="font-semibold sacred-text text-earth">Email</h3>
+                    <p className="body-text text-earth/80">nadia@nadiaelmagrabi.com</p>
+                    <p className="text-sm body-text text-earth/60 mt-1">I respond within 24 hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                    <MapPin className="w-6 h-6 text-purple-600" />
+                  <div className="bg-sage/20 p-3 rounded-lg mr-4">
+                    <MapPin className="w-6 h-6 text-forest" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Location</h3>
-                    <p className="text-gray-600">Online Sessions Worldwide</p>
-                    <p className="text-sm text-gray-500 mt-1">Serving clients globally via video call</p>
+                    <h3 className="font-semibold sacred-text text-earth">Location</h3>
+                    <p className="body-text text-earth/80">Online Sessions Worldwide</p>
+                    <p className="text-sm body-text text-earth/60 mt-1">Serving clients globally via video call</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-purple-100 p-3 rounded-lg mr-4">
-                    <Clock className="w-6 h-6 text-purple-600" />
+                  <div className="bg-sage/20 p-3 rounded-lg mr-4">
+                    <Clock className="w-6 h-6 text-forest" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Availability</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                    <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM EST</p>
-                    <p className="text-sm text-gray-500 mt-1">Sunday: Closed for rest and renewal</p>
+                    <h3 className="font-semibold sacred-text text-earth">Availability</h3>
+                    <p className="body-text text-earth/80">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                    <p className="body-text text-earth/80">Saturday: 10:00 AM - 4:00 PM EST</p>
+                    <p className="text-sm body-text text-earth/60 mt-1">Sunday: Closed for rest and renewal</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white">
-              <h3 className="text-xl font-bold mb-4">Ready to Transform Your Life?</h3>
-              <p className="text-purple-100 mb-6">
+            <div className="earth-gradient rounded-xl p-6 text-cream divine-shadow">
+              <h3 className="text-xl font-bold sacred-text mb-4">Ready to Transform Your Life?</h3>
+              <p className="body-text text-cream/80 mb-6">
                 Book your complimentary discovery call to explore how we can work together on your spiritual journey.
               </p>
               <a
                 href="https://calendly.com/nadiaelmagrabi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center"
+                className="bg-cream text-forest px-6 py-3 rounded-lg font-semibold sacred-text hover:bg-cream/90 hover:text-earth transition-all duration-300 inline-flex items-center"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Discovery Call
               </a>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-md">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">FAQ</h3>
+            <div className="bg-cream/80 backdrop-blur-sm rounded-xl p-6 divine-shadow mystical-border">
+              <h3 className="text-xl font-bold sacred-text text-forest mb-4">FAQ</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-gray-800">How quickly will you respond?</h4>
-                  <p className="text-gray-600 text-sm">I typically respond to all inquiries within 24 hours during business days.</p>
+                  <h4 className="font-semibold sacred-text text-earth">How quickly will you respond?</h4>
+                  <p className="body-text text-earth/80 text-sm">I typically respond to all inquiries within 24 hours during business days.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Do you offer free consultations?</h4>
-                  <p className="text-gray-600 text-sm">Yes! I offer complimentary 15-minute discovery calls to see if we're a good fit.</p>
+                  <h4 className="font-semibold sacred-text text-earth">Do you offer free consultations?</h4>
+                  <p className="body-text text-earth/80 text-sm">Yes! I offer complimentary 15-minute discovery calls to see if we're a good fit.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">What timezone are you in?</h4>
-                  <p className="text-gray-600 text-sm">I'm based in Eastern Standard Time (EST) but work with clients worldwide.</p>
+                  <h4 className="font-semibold sacred-text text-earth">What timezone are you in?</h4>
+                  <p className="body-text text-earth/80 text-sm">I'm based in Eastern Standard Time (EST) but work with clients worldwide.</p>
                 </div>
               </div>
             </div>
