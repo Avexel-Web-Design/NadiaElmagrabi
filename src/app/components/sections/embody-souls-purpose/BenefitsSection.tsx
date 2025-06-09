@@ -5,7 +5,7 @@ import { CheckCircle, Star } from 'lucide-react';
 
 export default function BenefitsSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+    <section className="py-20 bg-gradient-to-br from-cream to-sage/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,10 +14,10 @@ export default function BenefitsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-4">
             Transform Your Life
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-earth body-text">
             By delving into these modalities, you'll experience profound shifts
           </p>
         </motion.div>
@@ -31,30 +31,30 @@ export default function BenefitsSection() {
           >
             <ul className="space-y-6">
               <li className="flex items-start gap-4">
-                <div className="bg-purple-600 rounded-full p-2 mt-1">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                <div className="bg-sage rounded-full p-2 mt-1">
+                  <CheckCircle className="w-6 h-6 text-cream" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Release What No Longer Serves</h3>
-                  <p className="text-gray-700">Clear inherited patterns, ancestral wounds, and past-life imprints that keep you stuck.</p>
+                  <h3 className="text-xl font-semibold sacred-text text-forest mb-2">Release What No Longer Serves</h3>
+                  <p className="text-earth body-text">Clear inherited patterns, ancestral wounds, and past-life imprints that keep you stuck.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <div className="bg-indigo-600 rounded-full p-2 mt-1">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                <div className="bg-amethyst rounded-full p-2 mt-1">
+                  <CheckCircle className="w-6 h-6 text-cream" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Gain Profound Self-Awareness</h3>
-                  <p className="text-gray-700">Understand your unique design and soul's journey with unprecedented clarity.</p>
+                  <h3 className="text-xl font-semibold sacred-text text-forest mb-2">Gain Profound Self-Awareness</h3>
+                  <p className="text-earth body-text">Understand your unique design and soul's journey with unprecedented clarity.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <div className="bg-pink-600 rounded-full p-2 mt-1">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                <div className="bg-earth rounded-full p-2 mt-1">
+                  <CheckCircle className="w-6 h-6 text-cream" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Step Into Your Power</h3>
-                  <p className="text-gray-700">Confidently embrace the life you're meant to live with authenticity and purpose.</p>
+                  <h3 className="text-xl font-semibold sacred-text text-forest mb-2">Step Into Your Power</h3>
+                  <p className="text-earth body-text">Confidently embrace the life you're meant to live with authenticity and purpose.</p>
                 </div>
               </li>
             </ul>
@@ -65,18 +65,18 @@ export default function BenefitsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-8 rounded-2xl shadow-lg"
+            className="bg-cream/80 backdrop-blur-sm p-8 rounded-2xl divine-shadow mystical-border"
           >
             <div className="text-center">
-              <Star className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <Star className="w-16 h-16 text-gold mx-auto mb-6" />
+              <h3 className="text-2xl font-bold sacred-text text-forest mb-4">
                 Your Soul's Blueprint Awaits
               </h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">
+              <p className="text-earth body-text mb-6 leading-relaxed">
                 This isn't just healing—it's a complete recalibration of your life force. You'll walk away with tools, insights, and a deep knowing of who you truly are.
               </p>
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <p className="text-purple-700 font-semibold">
+              <div className="bg-sage/10 backdrop-blur-sm p-4 rounded-lg mystical-border">
+                <p className="text-sage font-semibold body-text">
                   "The patterns that kept you small will dissolve, and your authentic power will emerge."
                 </p>
               </div>

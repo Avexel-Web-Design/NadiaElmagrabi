@@ -16,7 +16,7 @@ const features = [
 
 export default function PLRFeaturesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,10 +24,10 @@ export default function PLRFeaturesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
             What You'll Discover
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-earth body-text max-w-3xl mx-auto">
             Everything you need to safely explore your past lives and heal current life patterns
           </p>
         </motion.div>
@@ -41,10 +41,10 @@ export default function PLRFeaturesSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex items-center"
             >
-              <div className="bg-purple-100 rounded-full p-2 mr-4">
-                <Check className="w-5 h-5 text-purple-600" />
+              <div className="bg-sage/20 rounded-full p-2 mr-4">
+                <Check className="w-5 h-5 text-sage" />
               </div>
-              <span className="text-gray-700 text-lg">{feature}</span>
+              <span className="text-earth body-text text-lg">{feature}</span>
             </motion.div>
           ))}
         </div>

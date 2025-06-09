@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ProgramStructureSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-cream to-sage/5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,36 +15,36 @@ export default function ProgramStructureSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-4">
             Your Transformation Journey
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-earth body-text">
             A comprehensive 6-week program designed for deep integration
           </p>
         </motion.div>
 
-        <div className="bg-gradient-to-br from-purple-100 to-indigo-100 p-8 rounded-2xl shadow-lg mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Program Structure</h3>
+        <div className="bg-gradient-to-br from-sage/10 to-amethyst/10 backdrop-blur-sm p-8 rounded-2xl divine-shadow mystical-border mb-12">
+          <h3 className="text-2xl font-bold sacred-text text-forest mb-6 text-center">Program Structure</h3>
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
+              <div className="bg-sage text-cream rounded-full w-8 h-8 flex items-center justify-center font-bold sacred-text">1</div>
               <div>
-                <h4 className="font-semibold text-gray-900">Weeks 1-2: Human Design Foundation</h4>
-                <p className="text-gray-700">Deep dive into your unique chart and energetic blueprint</p>
+                <h4 className="font-semibold sacred-text text-forest">Weeks 1-2: Human Design Foundation</h4>
+                <p className="text-earth body-text">Deep dive into your unique chart and energetic blueprint</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
+              <div className="bg-amethyst text-cream rounded-full w-8 h-8 flex items-center justify-center font-bold sacred-text">2</div>
               <div>
-                <h4 className="font-semibold text-gray-900">Weeks 3-4: Past Life Exploration</h4>
-                <p className="text-gray-700">Guided regression sessions and healing integration</p>
+                <h4 className="font-semibold sacred-text text-forest">Weeks 3-4: Past Life Exploration</h4>
+                <p className="text-earth body-text">Guided regression sessions and healing integration</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="bg-pink-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
+              <div className="bg-earth text-cream rounded-full w-8 h-8 flex items-center justify-center font-bold sacred-text">3</div>
               <div>
-                <h4 className="font-semibold text-gray-900">Weeks 5-6: Intuitive Mastery</h4>
-                <p className="text-gray-700">Develop your psychic abilities and spiritual connection</p>
+                <h4 className="font-semibold sacred-text text-forest">Weeks 5-6: Intuitive Mastery</h4>
+                <p className="text-earth body-text">Develop your psychic abilities and spiritual connection</p>
               </div>
             </div>
           </div>
@@ -57,19 +57,19 @@ export default function ProgramStructureSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white p-8 rounded-2xl shadow-lg">
-            <h3 className="text-2xl font-bold mb-4">Ready to Begin?</h3>
-            <p className="text-purple-100 mb-6 text-lg">
+          <div className="earth-gradient text-cream p-8 rounded-2xl divine-shadow">
+            <h3 className="text-2xl font-bold sacred-text mb-4">Ready to Begin?</h3>
+            <p className="text-cream/90 body-text mb-6 text-lg">
               Your transformational journey starts with a single step
             </p>
             <Link
               href="https://www.groupregressionsession.com/offers/Loa3JMLQ/checkout"
-              className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2"
+              className="bg-cream text-forest px-8 py-4 rounded-full font-semibold sacred-text text-lg hover:bg-cream/90 transition-all duration-300 inline-flex items-center gap-2"
             >
               Your Transformational Journey Starts Here <ArrowRight className="w-5 h-5" />
             </Link>
             <div className="mt-6">
-              <p className="text-purple-100 text-sm">
+              <p className="text-cream/80 body-text text-sm">
                 Investment varies by program length • Payment plans available • 100% satisfaction guarantee
               </p>
             </div>
