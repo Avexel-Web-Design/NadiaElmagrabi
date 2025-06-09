@@ -1,26 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Spiritual Color Palette */
+  --spiritual-gold: #D4AF37;
+  --spiritual-deep-gold: #B8860B;
+  --cosmic-blue: #1e3a8a;
+  --cosmic-deep-blue: #0f172a;
+  --ethereal-pink: #F8BBD9;
+  --ethereal-deep-pink: #EC4899;
+  --mystical-purple: #6B46C1;
+  --mystical-deep-purple: #4C1D95;
+  --sacred-white: #FEFEFE;
+  --moonstone: #E5E7EB;
+  --stardust: #F3F4F6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: linear-gradient(135deg, var(--cosmic-deep-blue) 0%, var(--mystical-deep-purple) 50%, var(--cosmic-blue) 100%);
+    min-height: 100vh;
+    color: var(--sacred-white);
+    position: relative;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(248, 187, 217, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(107, 70, 193, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .spiritual-text-shadow {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+
+  .ethereal-glow {
+    box-shadow: 
+      0 0 20px rgba(212, 175, 55, 0.2),
+      0 0 40px rgba(248, 187, 217, 0.1),
+      0 0 60px rgba(107, 70, 193, 0.1);
+  }
+
+  .sacred-border {
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .sacred-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--spiritual-gold), var(--ethereal-pink), var(--mystical-purple), var(--spiritual-gold));
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0.5;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .spiritual-gradient {
+    background: linear-gradient(135deg, 
+      rgba(212, 175, 55, 0.1) 0%, 
+      rgba(248, 187, 217, 0.1) 50%, 
+      rgba(107, 70, 193, 0.1) 100%
+    );
+  }
+
+  .cosmic-gradient {
+    background: linear-gradient(135deg, 
+      rgba(30, 58, 138, 0.9) 0%, 
+      rgba(76, 29, 149, 0.9) 50%, 
+      rgba(15, 23, 42, 0.9) 100%
+    );
+  }
+
+  .ethereal-card {
+    @apply sacred-border ethereal-glow;
+    background: rgba(254, 254, 254, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  .mystical-button {
+    @apply sacred-border;
+    background: linear-gradient(135deg, var(--spiritual-gold), var(--spiritual-deep-gold));
+    color: var(--cosmic-deep-blue);
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+
+  .mystical-button:hover {
+    background: linear-gradient(135deg, var(--spiritual-deep-gold), var(--spiritual-gold));
+    transform: translateY(-2px);
+    box-shadow: 
+      0 10px 30px rgba(212, 175, 55, 0.3),
+      0 0 40px rgba(212, 175, 55, 0.2);
+  }
+
+  .sacred-geometry {
+    position: relative;
+  }
+
+  .sacred-geometry::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .stardust-bg {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(212, 175, 55, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(248, 187, 217, 0.3), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(107, 70, 193, 0.3), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(212, 175, 55, 0.3), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(248, 187, 217, 0.3), transparent);
+    background-size: 200px 100px;
+    animation: stardust 20s linear infinite;
+  }
+
+  @keyframes stardust {
+    0% { background-position: 0 0; }
+    100% { background-position: 200px 100px; }
+  }
+
+  /* Additional Spiritual Components */
+  .mystical-card {
+    @apply sacred-border ethereal-glow;
+    background: linear-gradient(135deg, 
+      rgba(212, 175, 55, 0.1) 0%, 
+      rgba(248, 187, 217, 0.1) 50%, 
+      rgba(107, 70, 193, 0.1) 100%
+    );
+    backdrop-filter: blur(15px);
+    position: relative;
+  }
+
+  .mystical-btn-primary {
+    @apply sacred-border;
+    background: linear-gradient(135deg, var(--spiritual-gold), var(--spiritual-deep-gold));
+    color: var(--cosmic-deep-blue);
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mystical-btn-primary:hover {
+    background: linear-gradient(135deg, var(--spiritual-deep-gold), var(--spiritual-gold));
+    transform: translateY(-2px);
+    box-shadow: 
+      0 10px 30px rgba(212, 175, 55, 0.3),
+      0 0 40px rgba(212, 175, 55, 0.2);
+  }
+
+  .mystical-btn-secondary {
+    border: 2px solid rgba(254, 254, 254, 0.8);
+    color: rgba(254, 254, 254, 0.9);
+    background: transparent;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+
+  .mystical-btn-secondary:hover {
+    background: rgba(254, 254, 254, 0.1);
+    border-color: var(--spiritual-gold);
+    color: var(--spiritual-gold);
+    backdrop-filter: blur(10px);
+  }
+
+  .celestial-gradient {
+    background: linear-gradient(135deg, 
+      rgba(15, 23, 42, 0.95) 0%, 
+      rgba(76, 29, 149, 0.95) 30%,
+      rgba(30, 58, 138, 0.95) 70%, 
+      rgba(15, 23, 42, 0.95) 100%
+    );
+  }
+
+  .flower-of-life {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .flower-of-life::before,
+  .flower-of-life::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .flower-of-life::before {
+    transform: translate(-30%, -50%);
+  }
+
+  .flower-of-life::after {
+    transform: translate(-70%, -50%);
+  }
+
+  .merkaba-pattern {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .merkaba-pattern::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 43px solid rgba(212, 175, 55, 0.2);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .merkaba-pattern::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 43px solid rgba(212, 175, 55, 0.2);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Floating Animation Variations */
+  .floating-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .floating-medium {
+    animation: float-medium 6s ease-in-out infinite;
+  }
+
+  .floating-fast {
+    animation: float-fast 4s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(180deg); }
+  }
+
+  @keyframes float-medium {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(120deg); }
+  }
+
+  @keyframes float-fast {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(90deg); }
+  }
+
+  .rotating {
+    animation: rotate 20s linear infinite;
+  }
+
+  .rotating-slow {
+    animation: rotate-slow 30s linear infinite;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
 }
