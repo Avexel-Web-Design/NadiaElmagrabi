@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-sage/10 to-lavender/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4 sacred-text">
             Which path is calling you?
           </h2>
         </motion.div>
@@ -27,17 +27,17 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-purple-100 to-pink-100 p-8 rounded-2xl shadow-lg"
+            className="spiritual-gradient p-8 rounded-2xl divine-shadow"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-cream mb-4 sacred-text">
               Your Human Design Chart: Align with Trusting Your Path
             </h3>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              A 3-session Human Design journey to reconnect with your soul's natural rhythm. This offering is for those seeking clarity, alignment, and a deeper connection to self.
+            <p className="text-cream/90 mb-6 leading-relaxed body-text">
+              A 3-session Human Design journey to reconnect with your soul&apos;s natural rhythm. This offering is for those seeking clarity, alignment, and a deeper connection to self.
             </p>
             <Link
               href="https://www.groupregressionsession.com/offers/MpBD2MqT/checkout"
-              className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all duration-300 gap-2"
+              className="inline-flex items-center bg-gold text-deep-purple px-6 py-3 rounded-full font-semibold hover:bg-copper hover:text-cream transition-all duration-300 gap-2 divine-shadow body-text"
             >
               Book Your First Step Forward <ArrowRight className="w-4 h-4" />
             </Link>
@@ -49,15 +49,15 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-indigo-100 to-purple-100 p-8 rounded-2xl shadow-lg"
+            className="earth-gradient p-8 rounded-2xl divine-shadow"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Human Design & Past Life Regression: Embody Your Soul's Purpose
+            <h3 className="text-2xl font-bold text-cream mb-4 sacred-text">
+              Human Design & Past Life Regression: Embody Your Soul&apos;s Purpose
             </h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
+            <p className="text-cream/90 mb-4 leading-relaxed body-text">
               A transformative journey to align with your true calling. This offering combines Human Design and Past Life Regression to help you access the wisdom within.
             </p>
-            <ul className="text-gray-700 mb-6 space-y-2">
+            <ul className="text-cream/90 mb-6 space-y-2 body-text">
               <li>• Human Design Sessions: Understand your unique energetic blueprint</li>
               <li>• Past Life Regression: Explore past life experiences safely</li>
               <li>• Intuitive Development: Learn to listen to messages from spirit</li>

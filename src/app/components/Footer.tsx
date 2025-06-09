@@ -3,26 +3,26 @@ import { Heart, Mail, Phone, Instagram, Facebook, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-forest text-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Heart className="w-8 h-8 text-purple-400" />
-              <span className="text-2xl font-bold">Nadia Elmagrabi</span>
+              <Heart className="w-8 h-8 text-lavender" />
+              <span className="text-2xl font-bold sacred-text">Nadia Elmagrabi</span>
             </div>
-            <p className="text-gray-300 mb-4">
+            <p className="text-cream/80 mb-4 body-text">
               Transformational Guide helping women align with their spiritual path through ancestral healing and soul-level transformation.
             </p>
             <div className="flex space-x-4">
-              <Link href="https://www.instagram.com/nadia_elmagrabi/" className="text-gray-300 hover:text-purple-400 transition-colors">
+              <Link href="https://www.instagram.com/nadia_elmagrabi/" className="text-cream/70 hover:text-gold transition-colors">
                 <Instagram className="w-5 h-5" />
               </Link>
-              <Link href="https://www.facebook.com/n.elmagrabi/" className="text-gray-300 hover:text-purple-400 transition-colors">
+              <Link href="https://www.facebook.com/n.elmagrabi/" className="text-cream/70 hover:text-gold transition-colors">
                 <Facebook className="w-5 h-5" />
               </Link>
-              <Link href="https://www.linkedin.com/in/nadia-elmagrabi-72083329" className="text-gray-300 hover:text-purple-400 transition-colors">
+              <Link href="https://www.linkedin.com/in/nadia-elmagrabi-72083329" className="text-cream/70 hover:text-gold transition-colors">
                 <Linkedin className="w-5 h-5" />
               </Link>
             </div>
@@ -30,23 +30,23 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 sacred-text">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/about-nadia" className="text-gray-300 hover:text-purple-400 transition-colors">About Nadia</Link></li>
-              <li><Link href="/embody-your-souls-purpose" className="text-gray-300 hover:text-purple-400 transition-colors">Soul's Purpose</Link></li>
-              <li><Link href="/testimonials" className="text-gray-300 hover:text-purple-400 transition-colors">Testimonials</Link></li>
-              <li><Link href="/resources" className="text-gray-300 hover:text-purple-400 transition-colors">Free Resources</Link></li>
+              <li><Link href="/about-nadia" className="text-cream/80 hover:text-gold transition-colors body-text">About Nadia</Link></li>
+              <li><Link href="/embody-your-souls-purpose" className="text-cream/80 hover:text-gold transition-colors body-text">Soul's Purpose</Link></li>
+              <li><Link href="/testimonials" className="text-cream/80 hover:text-gold transition-colors body-text">Testimonials</Link></li>
+              <li><Link href="/resources" className="text-cream/80 hover:text-gold transition-colors body-text">Free Resources</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 sacred-text">Services</h3>
             <ul className="space-y-2">
-              <li><Link href="/embody-your-souls-purpose" className="text-gray-300 hover:text-purple-400 transition-colors">Human Design & PLR</Link></li>
-              <li><Link href="/shadow-work-pdf" className="text-gray-300 hover:text-purple-400 transition-colors">Shadow Work PDF</Link></li>
-              <li><Link href="/plr-session-ebook" className="text-gray-300 hover:text-purple-400 transition-colors">PLR Session eBook</Link></li>
-              <li><Link href="/podcasts" className="text-gray-300 hover:text-purple-400 transition-colors">Podcasts</Link></li>
+              <li><Link href="/embody-your-souls-purpose" className="text-cream/80 hover:text-gold transition-colors body-text">Human Design & PLR</Link></li>
+              <li><Link href="/shadow-work-pdf" className="text-cream/80 hover:text-gold transition-colors body-text">Shadow Work PDF</Link></li>
+              <li><Link href="/plr-session-ebook" className="text-cream/80 hover:text-gold transition-colors body-text">PLR Session eBook</Link></li>
+              <li><Link href="/podcasts" className="text-cream/80 hover:text-gold transition-colors body-text">Podcasts</Link></li>
             </ul>
           </div>
 

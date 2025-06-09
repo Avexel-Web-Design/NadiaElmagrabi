@@ -21,7 +21,7 @@ export default function TestimonialsPreviewSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+    <section className="py-20 bg-gradient-to-br from-cream to-sage/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function TestimonialsPreviewSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-forest mb-4 sacred-text">
             Client Transformations
           </h2>
         </motion.div>
@@ -43,15 +43,15 @@ export default function TestimonialsPreviewSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-2xl shadow-lg"
+              className="bg-cream/80 p-6 rounded-2xl divine-shadow mystical-border"
             >
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-gold fill-current" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-              <p className="text-purple-600 font-semibold">~{testimonial.author}</p>
+              <p className="text-earth mb-4 italic body-text">&ldquo;{testimonial.text}&rdquo;</p>
+              <p className="text-amethyst font-semibold sacred-text">~{testimonial.author}</p>
             </motion.div>
           ))}
         </div>

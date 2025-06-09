@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Spiritual Color Palette */
+  --background: #faf9f6;
+  --foreground: #3a3934;
+  
+  /* Earth tones */
+  --sage: #87a96b;
+  --forest: #2d5016;
+  --earth: #8b6f47;
+  --clay: #c4a484;
+  --cream: #f7f3e9;
+  
+  /* Spiritual purples */
+  --lavender: #9d8df1;
+  --amethyst: #6b46c1;
+  --deep-purple: #4c1d95;
+  
+  /* Rich blues */
+  --sky: #7dd3fc;
+  --ocean: #0369a1;
+  --midnight: #1e3a8a;
+  
+  /* Warm accents */
+  --gold: #d4af37;
+  --copper: #b87333;
+  --rose: #f4a5a5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-garamond), var(--font-crimson), serif;
+  --font-sans: var(--font-crimson), serif;
+  --color-sage: var(--sage);
+  --color-forest: var(--forest);
+  --color-earth: var(--earth);
+  --color-clay: var(--clay);
+  --color-cream: var(--cream);
+  --color-lavender: var(--lavender);
+  --color-amethyst: var(--amethyst);
+  --color-deep-purple: var(--deep-purple);
+  --color-sky: var(--sky);
+  --color-ocean: var(--ocean);
+  --color-midnight: var(--midnight);
+  --color-gold: var(--gold);
+  --color-copper: var(--copper);
+  --color-rose: var(--rose);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #2a2823;
+    --foreground: #f7f3e9;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-crimson), serif;
+  line-height: 1.7;
+}
+
+/* Custom spiritual styles */
+.spiritual-gradient {
+  background: linear-gradient(135deg, var(--sage) 0%, var(--amethyst) 50%, var(--ocean) 100%);
+}
+
+.earth-gradient {
+  background: linear-gradient(135deg, var(--earth) 0%, var(--clay) 50%, var(--gold) 100%);
+}
+
+.sacred-text {
+  font-family: var(--font-garamond), serif;
+  letter-spacing: 0.025em;
+}
+
+.body-text {
+  font-family: var(--font-crimson), serif;
+  line-height: 1.8;
+}
+
+.divine-shadow {
+  box-shadow: 0 10px 30px rgba(139, 111, 71, 0.1), 0 4px 8px rgba(139, 111, 71, 0.05);
+}
+
+.mystical-border {
+  border: 1px solid rgba(135, 169, 107, 0.3);
 }

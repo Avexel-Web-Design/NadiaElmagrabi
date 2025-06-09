@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Crimson_Text, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const crimsonText = Crimson_Text({
   subsets: ["latin"],
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-crimson",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ebGaramond = EB_Garamond({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-garamond",
 });
 
 export const metadata: Metadata = {
@@ -34,9 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${crimsonText.variable} ${ebGaramond.variable} antialiased sacred-text`}>
         <Navigation />
         {children}
         <Footer />
