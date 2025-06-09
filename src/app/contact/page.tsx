@@ -1,0 +1,334 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Calendar, Instagram } from 'lucide-react';
+import { useState } from 'react';
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    // You would typically send this to your backend or email service
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Get In <span className="text-pink-300">Touch</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-purple-100 max-w-3xl mx-auto">
+              Ready to begin your transformational journey? I'm here to support you every step of the way
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Options */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Connect With Me
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the way that feels most aligned for you to reach out and begin our conversation
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Book a Session</h3>
+              <p className="text-gray-600 mb-4">Schedule your transformational session directly</p>
+              <a
+                href="https://calendly.com/nadiaelmagrabi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-600 text-white px-6 py-2 rounded-full font-medium hover:bg-purple-700 transition-colors duration-300"
+              >
+                Schedule Now
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-pink-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Email Me</h3>
+              <p className="text-gray-600 mb-4">Send me a message and I'll respond within 24 hours</p>
+              <a
+                href="mailto:nadia@nadiaelmagrabi.com"
+                className="bg-pink-600 text-white px-6 py-2 rounded-full font-medium hover:bg-pink-700 transition-colors duration-300"
+              >
+                Send Email
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageCircle className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">WhatsApp</h3>
+              <p className="text-gray-600 mb-4">Quick questions or to schedule a call</p>
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 text-white px-6 py-2 rounded-full font-medium hover:bg-green-700 transition-colors duration-300"
+              >
+                Message
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center"
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Instagram className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Instagram</h3>
+              <p className="text-gray-600 mb-4">Follow for daily inspiration and updates</p>
+              <a
+                href="https://instagram.com/nadiaelmagrabi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-600 text-white px-6 py-2 rounded-full font-medium hover:bg-purple-700 transition-colors duration-300"
+              >
+                Follow
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Send Me a Message</h2>
+              <p className="text-gray-600 mb-8">
+                Have questions about my services or ready to begin your transformation? Fill out the form below and I'll get back to you personally.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Subject *
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  >
+                    <option value="">Select a topic</option>
+                    <option value="session">Book a Session</option>
+                    <option value="souls-purpose">Embody Your Soul's Purpose Program</option>
+                    <option value="shadow-work">Shadow Work Inquiry</option>
+                    <option value="plr">Past Life Regression</option>
+                    <option value="general">General Question</option>
+                    <option value="collaboration">Collaboration Opportunity</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Tell me about what you're looking for support with..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 flex items-center justify-center"
+                >
+                  <Send className="w-5 h-5 mr-2" />
+                  Send Message
+                </button>
+              </form>
+            </motion.div>
+
+            {/* Contact Info */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-3xl font-bold text-gray-800 mb-6">Contact Information</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="bg-purple-100 p-3 rounded-lg mr-4">
+                      <Mail className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-800">Email</h3>
+                      <p className="text-gray-600">nadia@nadiaelmagrabi.com</p>
+                      <p className="text-sm text-gray-500 mt-1">I respond within 24 hours</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="bg-purple-100 p-3 rounded-lg mr-4">
+                      <MapPin className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-800">Location</h3>
+                      <p className="text-gray-600">Online Sessions Worldwide</p>
+                      <p className="text-sm text-gray-500 mt-1">Serving clients globally via video call</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="bg-purple-100 p-3 rounded-lg mr-4">
+                      <Clock className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-800">Availability</h3>
+                      <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                      <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM EST</p>
+                      <p className="text-sm text-gray-500 mt-1">Sunday: Closed for rest and renewal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-6 text-white">
+                <h3 className="text-xl font-bold mb-4">Ready to Transform Your Life?</h3>
+                <p className="text-purple-100 mb-6">
+                  Book your complimentary discovery call to explore how we can work together on your spiritual journey.
+                </p>
+                <a
+                  href="https://calendly.com/nadiaelmagrabi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book Discovery Call
+                </a>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">FAQ</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-800">How quickly will you respond?</h4>
+                    <p className="text-gray-600 text-sm">I typically respond to all inquiries within 24 hours during business days.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Do you offer free consultations?</h4>
+                    <p className="text-gray-600 text-sm">Yes! I offer complimentary 15-minute discovery calls to see if we're a good fit.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">What timezone are you in?</h4>
+                    <p className="text-gray-600 text-sm">I'm based in Eastern Standard Time (EST) but work with clients worldwide.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
