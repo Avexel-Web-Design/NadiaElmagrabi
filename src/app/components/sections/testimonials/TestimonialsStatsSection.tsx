@@ -11,7 +11,7 @@ const stats = [
 
 export default function TestimonialsStatsSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-cream/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -22,10 +22,10 @@ export default function TestimonialsStatsSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">
+              <div className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
+              <div className="body-text text-earth/80 font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </div>

@@ -62,7 +62,7 @@ const testimonials = [
 
 export default function TestimonialsGridSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-sage/10 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,10 +70,10 @@ export default function TestimonialsGridSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
             Voices of Transformation
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl body-text text-earth/80 max-w-3xl mx-auto">
             Discover how Nadia's guidance has helped others step into their authentic power and purpose
           </p>
         </motion.div>
@@ -85,35 +85,35 @@ export default function TestimonialsGridSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-cream/80 backdrop-blur-sm rounded-2xl p-8 divine-shadow hover:divine-shadow mystical-border transition-all duration-300"
             >
               <div className="flex items-center mb-6">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
+                  className="w-12 h-12 rounded-full object-cover mr-4 mystical-border"
                 />
                 <div>
-                  <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                  <h3 className="font-semibold sacred-text text-forest">{testimonial.name}</h3>
+                  <p className="text-sm body-text text-earth/70">{testimonial.location}</p>
                 </div>
               </div>
 
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-gold fill-current" />
                 ))}
               </div>
 
               <div className="relative mb-6">
-                <Quote className="w-8 h-8 text-purple-200 absolute -top-2 -left-2" />
-                <p className="text-gray-700 leading-relaxed pl-6">
+                <Quote className="w-8 h-8 text-sage/30 absolute -top-2 -left-2" />
+                <p className="body-text text-earth/80 leading-relaxed pl-6">
                   "{testimonial.text}"
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-gray-100">
-                <span className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+              <div className="pt-4 border-t border-sage/20">
+                <span className="inline-block bg-sage/20 text-forest px-3 py-1 rounded-full text-sm font-medium body-text">
                   {testimonial.program}
                 </span>
               </div>

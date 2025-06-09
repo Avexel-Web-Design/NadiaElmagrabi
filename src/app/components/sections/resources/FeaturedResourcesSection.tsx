@@ -72,7 +72,7 @@ const resources = [
 
 export default function FeaturedResourcesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-cream/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,10 +80,10 @@ export default function FeaturedResourcesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
             Featured Digital Products
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl body-text text-earth/80 max-w-3xl mx-auto">
             Carefully crafted resources to accelerate your spiritual growth and transformation
           </p>
         </motion.div>
@@ -95,7 +95,7 @@ export default function FeaturedResourcesSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-cream/80 backdrop-blur-sm rounded-2xl divine-shadow overflow-hidden hover:divine-shadow mystical-border transition-all duration-300"
             >
               <div className="relative h-48">
                 <img
@@ -104,12 +104,12 @@ export default function FeaturedResourcesSection() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-forest text-cream px-3 py-1 rounded-full text-sm font-medium sacred-text">
                     {resource.type}
                   </span>
                 </div>
                 <div className="absolute top-4 right-4">
-                  <span className="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-bold">
+                  <span className="bg-cream text-forest px-3 py-1 rounded-full text-sm font-bold sacred-text">
                     {resource.price}
                   </span>
                 </div>
@@ -117,20 +117,20 @@ export default function FeaturedResourcesSection() {
 
               <div className="p-8">
                 <div className="flex items-center mb-4">
-                  <resource.icon className="w-6 h-6 text-purple-600 mr-3" />
-                  <h3 className="text-xl font-bold text-gray-800">{resource.title}</h3>
+                  <resource.icon className="w-6 h-6 text-forest mr-3" />
+                  <h3 className="text-xl font-bold sacred-text text-forest">{resource.title}</h3>
                 </div>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="body-text text-earth/80 mb-6 leading-relaxed">
                   {resource.description}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-3">What's Included:</h4>
+                  <h4 className="font-semibold sacred-text text-earth mb-3">What's Included:</h4>
                   <ul className="space-y-2">
                     {resource.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-gray-600">
-                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                      <li key={i} className="flex items-center body-text text-earth/80">
+                        <Star className="w-4 h-4 text-gold mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -139,10 +139,10 @@ export default function FeaturedResourcesSection() {
 
                 <a
                   href={resource.link}
-                  className={`w-full flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors duration-300 ${
+                  className={`w-full flex items-center justify-center px-6 py-3 rounded-lg font-semibold sacred-text transition-all duration-300 divine-shadow ${
                     resource.price === 'Free'
-                      ? 'bg-green-600 hover:bg-green-700 text-white'
-                      : 'bg-purple-600 hover:bg-purple-700 text-white'
+                      ? 'bg-forest hover:bg-earth text-cream'
+                      : 'bg-earth hover:bg-clay text-cream'
                   }`}
                 >
                   {resource.price === 'Free' ? (

@@ -17,7 +17,7 @@ const featuredPodcast = {
 
 export default function FeaturedEpisodeSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-cream/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export default function FeaturedEpisodeSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-4">
             Featured Episode
           </h2>
         </motion.div>
@@ -34,30 +34,30 @@ export default function FeaturedEpisodeSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl overflow-hidden"
+          className="nature-gradient rounded-2xl overflow-hidden divine-shadow"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 md:p-12">
             <div>
               <div className="flex items-center mb-4">
-                <span className="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+                <span className="bg-cream/30 backdrop-blur-sm text-cream px-3 py-1 rounded-full text-sm font-medium sacred-text mr-3">
                   {featuredPodcast.category}
                 </span>
-                <span className="text-purple-100 text-sm">{featuredPodcast.date}</span>
+                <span className="text-cream/80 body-text text-sm">{featuredPodcast.date}</span>
               </div>
-              <h3 className="text-3xl font-bold text-white mb-4">{featuredPodcast.title}</h3>
-              <p className="text-purple-100 text-lg mb-6 leading-relaxed">
+              <h3 className="text-3xl font-bold sacred-text text-cream mb-4">{featuredPodcast.title}</h3>
+              <p className="text-cream/80 body-text text-lg mb-6 leading-relaxed">
                 {featuredPodcast.description}
               </p>
               <div className="flex items-center mb-6">
-                <Clock className="w-5 h-5 text-purple-200 mr-2" />
-                <span className="text-purple-100">{featuredPodcast.duration}</span>
+                <Clock className="w-5 h-5 text-cream/70 mr-2" />
+                <span className="text-cream/80 body-text">{featuredPodcast.duration}</span>
               </div>
               <div className="flex flex-wrap gap-4">
                 <a
                   href={featuredPodcast.spotify}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center"
+                  className="bg-cream text-forest px-6 py-3 rounded-lg font-semibold sacred-text hover:bg-cream/90 hover:text-earth transition-all duration-300 flex items-center divine-shadow"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Listen on Spotify
@@ -66,7 +66,7 @@ export default function FeaturedEpisodeSection() {
                   href={featuredPodcast.apple}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-300"
+                  className="border-2 border-cream text-cream px-6 py-3 rounded-lg font-semibold sacred-text hover:bg-cream hover:text-forest transition-all duration-300"
                 >
                   Apple Podcasts
                 </a>
@@ -76,11 +76,11 @@ export default function FeaturedEpisodeSection() {
               <img
                 src={featuredPodcast.image}
                 alt={featuredPodcast.title}
-                className="w-full h-64 lg:h-full object-cover rounded-xl"
+                className="w-full h-64 lg:h-full object-cover rounded-xl mystical-border"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-20 rounded-xl flex items-center justify-center">
-                <button className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-300">
-                  <Play className="w-8 h-8 text-purple-600 ml-1" />
+              <div className="absolute inset-0 bg-earth/20 rounded-xl flex items-center justify-center">
+                <button className="w-16 h-16 bg-cream/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-cream transition-all duration-300 divine-shadow">
+                  <Play className="w-8 h-8 text-forest ml-1" />
                 </button>
               </div>
             </div>

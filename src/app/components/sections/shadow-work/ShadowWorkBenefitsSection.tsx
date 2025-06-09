@@ -15,7 +15,7 @@ export default function ShadowWorkBenefitsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-cream to-amethyst/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -23,10 +23,10 @@ export default function ShadowWorkBenefitsSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
               Transform Your Life Through Shadow Integration
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-earth body-text mb-8">
               Shadow work isn't about fixing what's wrong with you—it's about reclaiming the wholeness that was always there.
             </p>
 
@@ -39,8 +39,8 @@ export default function ShadowWorkBenefitsSection() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-center"
                 >
-                  <Check className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
+                  <Check className="w-6 h-6 text-sage mr-3 flex-shrink-0" />
+                  <span className="text-earth body-text">{benefit}</span>
                 </motion.div>
               ))}
             </div>

@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function PLRTestimonialsSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-cream to-sage/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,10 +34,10 @@ export default function PLRTestimonialsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
             Reader Success Stories
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-earth body-text">
             See how past life regression has transformed lives
           </p>
         </motion.div>
@@ -49,24 +49,24 @@ export default function PLRTestimonialsSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-xl p-6"
+              className="bg-cream/80 backdrop-blur-sm rounded-xl p-6 divine-shadow mystical-border"
             >
               <div className="flex items-center mb-4">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
+                  className="w-12 h-12 rounded-full object-cover mr-4 soft-glow"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
+                  <h4 className="font-semibold sacred-text text-forest">{testimonial.name}</h4>
                   <div className="flex">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-4 h-4 text-gold fill-current" />
                     ))}
                   </div>
                 </div>
               </div>
-              <p className="text-gray-700 italic">"{testimonial.text}"</p>
+              <p className="text-earth body-text italic">&ldquo;{testimonial.text}&rdquo;</p>
             </motion.div>
           ))}
         </div>

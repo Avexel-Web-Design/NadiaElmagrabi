@@ -23,7 +23,7 @@ export default function ShadowWorkTestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-cream/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function ShadowWorkTestimonialsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
             What People Are Saying
           </h2>
         </motion.div>
@@ -43,15 +43,15 @@ export default function ShadowWorkTestimonialsSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-xl p-6"
+              className="bg-cream/70 backdrop-blur-sm mystical-border rounded-xl p-6 divine-shadow"
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-5 h-5 text-gold fill-current" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-              <p className="font-semibold text-gray-800">{testimonial.name}</p>
+              <p className="body-text text-earth/80 mb-4 italic">"{testimonial.text}"</p>
+              <p className="font-semibold sacred-text text-forest">{testimonial.name}</p>
             </motion.div>
           ))}
         </div>

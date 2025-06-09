@@ -27,7 +27,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-cream to-sage/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -36,14 +36,14 @@ export default function ContactFormSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Send Me a Message</h2>
-            <p className="text-gray-600 mb-8">
+            <h2 className="text-3xl font-bold sacred-text text-forest mb-6">Send Me a Message</h2>
+            <p className="text-earth body-text mb-8">
               Have questions about my services or ready to begin your transformation? Fill out the form below and I'll get back to you personally.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-forest body-text mb-2">
                   Full Name *
                 </label>
                 <input
@@ -53,13 +53,13 @@ export default function ContactFormSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-sage/30 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent text-forest body-text bg-cream/50"
                   placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-forest body-text mb-2">
                   Email Address *
                 </label>
                 <input
@@ -69,13 +69,13 @@ export default function ContactFormSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-sage/30 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent text-forest body-text bg-cream/50"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-forest body-text mb-2">
                   Subject *
                 </label>
                 <select
@@ -84,7 +84,7 @@ export default function ContactFormSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-sage/30 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent text-forest body-text bg-cream/50"
                 >
                   <option value="">Select a topic</option>
                   <option value="session">Book a Session</option>
@@ -97,7 +97,7 @@ export default function ContactFormSection() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-forest body-text mb-2">
                   Message *
                 </label>
                 <textarea
@@ -107,14 +107,14 @@ export default function ContactFormSection() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-sage/30 rounded-lg focus:ring-2 focus:ring-sage focus:border-transparent text-forest body-text bg-cream/50"
                   placeholder="Tell me about what you're looking for support with..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 flex items-center justify-center"
+                className="w-full earth-gradient text-cream py-3 rounded-lg font-semibold sacred-text hover:opacity-90 transition-opacity duration-300 flex items-center justify-center"
               >
                 <Send className="w-5 h-5 mr-2" />
                 Send Message

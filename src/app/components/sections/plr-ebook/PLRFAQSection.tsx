@@ -27,7 +27,7 @@ export default function PLRFAQSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-cream to-sage/5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export default function PLRFAQSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
             Frequently Asked Questions
           </h2>
         </motion.div>
@@ -47,10 +47,10 @@ export default function PLRFAQSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-lg p-6 shadow-md"
+              className="bg-cream/80 backdrop-blur-sm rounded-lg p-6 divine-shadow mystical-border"
             >
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">{faq.question}</h3>
-              <p className="text-gray-600">{faq.answer}</p>
+              <h3 className="text-lg font-semibold sacred-text text-forest mb-3">{faq.question}</h3>
+              <p className="text-earth body-text">{faq.answer}</p>
             </motion.div>
           ))}
         </div>
