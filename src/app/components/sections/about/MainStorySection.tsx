@@ -5,7 +5,7 @@ import { Heart } from 'lucide-react';
 
 export default function MainStorySection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-cream to-sage/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -14,10 +14,10 @@ export default function MainStorySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-6">
               My Journey to Healing
             </h2>
-            <div className="space-y-6 text-gray-700 leading-relaxed">
+            <div className="space-y-6 text-earth body-text leading-relaxed">
               <p className="text-lg">
                 As a Psychotherapist & wellness coach specializing in Past Life Regressions, I support working professionals and creative visionaries to step confidently into their radiance and power.
               </p>
@@ -38,18 +38,18 @@ export default function MainStorySection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-purple-100 to-pink-100 p-8 rounded-2xl"
+            className="earth-gradient p-8 rounded-2xl divine-shadow"
           >
             <div className="text-center">
-              <Heart className="w-16 h-16 text-purple-600 mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <Heart className="w-16 h-16 text-sage mx-auto mb-6" />
+              <h3 className="text-2xl font-bold sacred-text text-cream mb-4">
                 My Mission
               </h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-cream/90 body-text leading-relaxed mb-6">
                 To guide women back to their authentic selves, helping them reclaim their voice, confidence, and true power. I believe every woman has the capacity to heal not just herself, but her entire lineage.
               </p>
-              <div className="bg-white p-4 rounded-lg">
-                <p className="text-purple-700 font-semibold italic">
+              <div className="bg-cream/20 backdrop-blur-sm p-4 rounded-lg mystical-border">
+                <p className="text-cream font-semibold italic body-text">
                   "Some patterns don't start with you, but they can end with you."
                 </p>
               </div>

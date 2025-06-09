@@ -23,7 +23,7 @@ export default function ExpertiseSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
+    <section className="py-20 bg-gradient-to-br from-cream to-clay/20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,10 +32,10 @@ export default function ExpertiseSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold sacred-text text-forest mb-4">
             Areas of Expertise
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl body-text text-earth">
             20+ years of study and practice in transformational healing
           </p>
         </motion.div>
@@ -48,11 +48,11 @@ export default function ExpertiseSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-lg text-center"
+              className="bg-cream/80 p-8 rounded-2xl divine-shadow mystical-border text-center backdrop-blur-sm"
             >
-              <item.icon className="w-12 h-12 text-purple-600 mx-auto mb-6" />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{item.description}</p>
+              <item.icon className="w-12 h-12 text-sage mx-auto mb-6" />
+              <h3 className="text-xl font-bold sacred-text text-forest mb-4">{item.title}</h3>
+              <p className="text-earth body-text leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>

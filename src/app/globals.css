@@ -1,31 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  /* Spiritual Color Palette */
-  --background: #faf9f6;
-  --foreground: #3a3934;
+  /* Natural Earth Palette - Ultra Muted */
+  --background: #f6f3ed;
+  --foreground: #3a362f;
   
-  /* Earth tones */
-  --sage: #87a96b;
-  --forest: #2d5016;
-  --earth: #8b6f47;
-  --clay: #c4a484;
-  --cream: #f7f3e9;
+  /* Deep earth tones - more natural */
+  --sage: #5a6650;
+  --forest: #2a3622;
+  --earth: #5c4c41;
+  --clay: #8a7865;
+  --cream: #f0ebe3;
   
-  /* Spiritual purples */
-  --lavender: #9d8df1;
-  --amethyst: #6b46c1;
-  --deep-purple: #4c1d95;
+  /* Muted purples - more subdued */
+  --lavender: #6b6375;
+  --amethyst: #443a4d;
+  --deep-purple: #2e2333;
   
-  /* Rich blues */
-  --sky: #7dd3fc;
-  --ocean: #0369a1;
-  --midnight: #1e3a8a;
+  /* Natural blues - softer */
+  --sky: #6b7380;
+  --ocean: #3c454f;
+  --midnight: #232b33;
   
-  /* Warm accents */
-  --gold: #d4af37;
-  --copper: #b87333;
-  --rose: #f4a5a5;
+  /* Warm earth accents - toned down */
+  --gold: #9d8757;
+  --copper: #7a5d3f;
+  --rose: #8a6e62;
 }
 
 @theme inline {
@@ -51,8 +51,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2a2823;
-    --foreground: #f7f3e9;
+    --background: #1f1d1a;
+    --foreground: #ede8e0;
   }
 }
 
@@ -72,6 +72,14 @@ body {
   background: linear-gradient(135deg, var(--earth) 0%, var(--clay) 50%, var(--gold) 100%);
 }
 
+.nature-gradient {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 30%, var(--clay) 70%, var(--copper) 100%);
+}
+
+.muted-spiritual {
+  background: linear-gradient(135deg, var(--lavender) 0%, var(--sky) 50%, var(--earth) 100%);
+}
+
 .sacred-text {
   font-family: var(--font-garamond), serif;
   letter-spacing: 0.025em;
@@ -83,9 +91,17 @@ body {
 }
 
 .divine-shadow {
-  box-shadow: 0 10px 30px rgba(139, 111, 71, 0.1), 0 4px 8px rgba(139, 111, 71, 0.05);
+  box-shadow: 0 10px 30px rgba(92, 76, 65, 0.08), 0 4px 8px rgba(92, 76, 65, 0.05);
 }
 
 .mystical-border {
-  border: 1px solid rgba(135, 169, 107, 0.3);
+  border: 1px solid rgba(90, 102, 80, 0.2);
+}
+
+.earth-shadow {
+  box-shadow: 0 8px 25px rgba(90, 102, 80, 0.1), 0 3px 6px rgba(138, 120, 101, 0.06);
+}
+
+.soft-glow {
+  box-shadow: 0 0 20px rgba(157, 135, 87, 0.1);
 }

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ResourcesHeroSection() {
   return (
-    <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 text-white py-20">
+    <section className="nature-gradient text-cream py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,10 +12,10 @@ export default function ResourcesHeroSection() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Spiritual <span className="text-pink-300">Resources</span>
+          <h1 className="text-4xl md:text-6xl font-bold sacred-text mb-6">
+            Spiritual <span className="text-gold">Resources</span>
           </h1>
-          <p className="text-xl md:text-2xl text-purple-100 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-cream/90 body-text max-w-3xl mx-auto">
             Discover transformational tools, guides, and teachings to support your spiritual journey and personal growth
           </p>
         </motion.div>
