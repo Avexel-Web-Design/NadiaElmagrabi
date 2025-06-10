@@ -40,10 +40,9 @@ export default function Contact() {
           viewport={{ once: true }}
         ><h2 className="text-4xl md:text-5xl font-bold mb-6 serif-heading">
             <span className="spiritual-gradient">Begin Your Journey</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed serif-body">
-            Ready to unlock the mysteries of your soul? I'm here to guide you 
-            every step of the way. Reach out and let's start your transformation today.
+          </h2>          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed serif-body">
+            Ready to unlock the mysteries of your soul? I&apos;m here to guide you 
+            every step of the way. Reach out and let&apos;s start your transformation today.
           </p>
         </motion.div>
 
@@ -56,10 +55,9 @@ export default function Contact() {
             viewport={{ once: true }}
             className="motion-safe"
           >
-            <div className="space-y-8">              <div className="liquid-glass-ultra p-8 rounded-3xl">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center serif-heading">
+            <div className="space-y-8">              <div className="liquid-glass-ultra p-8 rounded-3xl">                  <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center serif-heading">
                   <HeartIcon className="h-6 w-6 mr-3 text-pink-500" />
-                  Let's Connect
+                  Let&apos;s Connect
                 </h3>
                 
                 <div className="space-y-6">                  {contactMethods.map((method, index) => (
@@ -104,10 +102,9 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                 viewport={{ once: true }}
-              >
-                <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                  "The cave you fear to enter holds the treasure you seek. 
-                  Let me help you find the courage to discover your inner gold."
+              >                <blockquote className="text-gray-700 italic text-lg leading-relaxed">
+                  &ldquo;The cave you fear to enter holds the treasure you seek. 
+                  Let me help you find the courage to discover your inner gold.&rdquo;
                 </blockquote>
                 <cite className="block mt-4 text-right text-gray-500 font-medium">
                   — Nadia Elmagrabi
@@ -178,8 +175,8 @@ export default function Contact() {
                   transition={{ duration: 0.6, delay: 0.9, ease: "easeOut" }}
                   viewport={{ once: true }}
                   className="motion-safe"
-                ><label className="block text-gray-700 font-medium mb-2 serif-body">
-                    I'm interested in
+                >                  <label className="block text-gray-700 font-medium mb-2 serif-body">
+                    I&apos;m interested in
                   </label>
                   <select className="w-full liquid-glass-card px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-purple-400 focus:outline-none transition-all serif-body">
                     <option>Select a service</option>

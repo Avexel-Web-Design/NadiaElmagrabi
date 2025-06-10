@@ -22,17 +22,15 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-8 motion-safe"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 serif-heading">
-              <span className="spiritual-gradient">Discover Your</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 serif-heading">            <span className="spiritual-gradient">Discover Your</span>
               <br />
-              <span className="text-gray-800 serif-heading">Soul's Blueprint</span>
-            </h1>              <motion.p 
+              <span className="text-gray-800 serif-heading">Soul&apos;s Blueprint</span>
+            </h1><motion.p 
               className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed serif-body motion-safe"
               initial={{ opacity: 0, y: 20 }}
               animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            >
-              Journey into the depths of your authentic self through 
+            >              Journey into the depths of your authentic self through 
               <span className="font-semibold text-purple-700 serif-heading"> Human Design readings</span> and 
               <span className="font-semibold text-yellow-700 serif-heading"> Past Life Regression</span>. 
               Unlock the wisdom your soul has been waiting to share.
@@ -60,7 +58,7 @@ export default function Hero() {
                 icon: <HeartIcon className="h-8 w-8" />,
                 title: "Soul Guidance",
                 description: "Transform your spiritual journey"
-              }            ].map((feature, index) => (              <motion.div
+              }            ].map((feature) => (              <motion.div
                 key={feature.title}
                 className="liquid-glass-card p-6 rounded-2xl group"
                 whileHover={{ scale: 1.02 }}

@@ -38,25 +38,22 @@ export default function About() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-            >
-              <p>
-                For over a decade, I've been privileged to guide souls on their journey 
+            >              <p>
+                For over a decade, I&apos;ve been privileged to guide souls on their journey 
                 of self-discovery and spiritual awakening. My path began with my own 
                 profound transformation through Human Design, which revealed the 
                 authentic blueprint of my being.
               </p>
-              
-              <p>
-                Through Past Life Regression, I've witnessed countless individuals 
+                <p>
+                Through Past Life Regression, I&apos;ve witnessed countless individuals 
                 heal ancient wounds, understand recurring patterns, and step into 
-                their true power. Each session is a sacred space where your soul's 
+                their true power. Each session is a sacred space where your soul&apos;s 
                 wisdom unfolds naturally.
               </p>
-              
-              <p>
+                <p>
                 My approach combines ancient wisdom with modern understanding, 
                 creating a bridge between your cosmic design and earthly experience. 
-                Together, we'll unlock the keys to your most authentic, fulfilling life.
+                Together, we&apos;ll unlock the keys to your most authentic, fulfilling life.
               </p>
             </motion.div>
 
@@ -123,10 +120,9 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
-            >
-              <blockquote className="text-gray-600 italic mb-3 serif-body">
-                "Nadia's guidance transformed my understanding of myself. 
-                The Human Design reading was like receiving a manual for my soul."
+            >              <blockquote className="text-gray-600 italic mb-3 serif-body">
+                &ldquo;Nadia&apos;s guidance transformed my understanding of myself. 
+                The Human Design reading was like receiving a manual for my soul.&rdquo;
               </blockquote>
               <cite className="text-sm text-gray-500 font-medium serif-body">
                 — Sarah M., Spiritual Seeker
