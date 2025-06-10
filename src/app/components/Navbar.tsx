@@ -7,6 +7,7 @@ import Link from 'next/link'
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const navRef = useRef<HTMLDivElement>(null)
   const [bubblePosition, setBubblePosition] = useState({ x: 0, width: 80 })
@@ -116,7 +117,6 @@ export default function Navbar() {
                   mass: 0.8,
                 }}
               />
-<<<<<<< HEAD
                 {navItems.map((item, index) => (
                 <Link key={item.name} href={item.href}>
                   <motion.div
@@ -130,21 +130,6 @@ export default function Navbar() {
                     {item.name}
                   </motion.div>
                 </Link>
-=======
-              
-              {navItems.map((item) => (                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  className={`text-gray-700 hover:text-purple-800 px-3 py-2 rounded-md text-sm font-medium relative group serif-body z-10 transition-colors duration-300 ${
-                    activeSection === item.id ? 'text-purple-800 font-semibold' : ''
-                  }`}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ y: 0 }}
-                  onClick={() => setActiveSection(item.id)}
-                >
-                  {item.name}
-                </motion.a>
->>>>>>> 73c163262bb678b83a3db3e4f08fc918f447782d
               ))}
             </div>
           </div>
