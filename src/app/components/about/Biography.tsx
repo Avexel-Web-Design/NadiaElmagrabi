@@ -4,7 +4,7 @@ import { SparklesIcon } from '@heroicons/react/24/outline'
 
 export default function Biography() {
   return (
-    <section id="biography" className="py-20 bg-gradient-to-br from-purple-50 via-yellow-50 to-green-50">
+    <section id="biography" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,14 +21,14 @@ export default function Biography() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-body">
             Discover the journey that led me to spiritual guidance and healing
           </p>
-        </motion.div>        <div className="grid md:grid-cols-2 gap-12 items-center">
+        </motion.div>        <div className="grid md:grid-cols-2 gap-12 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="space-y-6"
+            className="flex flex-col"
           >
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg flex-1">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4 serif-heading">
                 My Spiritual Journey
               </h3>
@@ -48,9 +48,9 @@ export default function Biography() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="space-y-6"
+            className="flex flex-col"
           >
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg flex-1">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4 serif-heading">
                 My Mission
               </h3>

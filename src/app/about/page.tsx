@@ -5,7 +5,7 @@ import Reviews from '../components/about/Reviews'
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-gradient-to-br from-purple-50 via-yellow-50 to-green-50">
       <Biography />
       <Background />
       <Education />

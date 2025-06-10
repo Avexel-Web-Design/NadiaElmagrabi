@@ -59,7 +59,7 @@ export default function Reviews() {
   }
 
   return (
-    <section id="reviews" className="py-20 bg-white/30">
+    <section id="reviews" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,13 +78,15 @@ export default function Reviews() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (            <motion.div
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {reviews.map((review, index) => (            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.1 }}
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex items-center mb-4">
@@ -112,10 +114,11 @@ export default function Reviews() {
                     {review.location}
                   </p>
                 </div>
-              </div>
-            </motion.div>
+              </div>            </div>
           ))}
-        </div>        <motion.div
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}

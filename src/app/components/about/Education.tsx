@@ -39,7 +39,7 @@ export default function Education() {
   ]
 
   return (
-    <section id="education" className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+    <section id="education" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,10 +56,14 @@ export default function Education() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-body">
             A foundation built on academic excellence and spiritual wisdom
           </p>
-        </motion.div>
-
-        {/* Formal Education */}
-        <div className="mb-16">
+        </motion.div>        {/* Formal Education */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="mb-16"
+        >
           <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center serif-heading">
             Formal Education
           </h3>
@@ -67,12 +71,8 @@ export default function Education() {
             {qualifications.map((qual, index) => {
               const IconComponent = qual.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true, amount: 0.1 }}
                   className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${qual.color}-100 mb-4`}>
@@ -88,15 +88,14 @@ export default function Education() {
                     <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
                       {qual.year}
                     </span>
-                  </div>
-                  <p className="text-gray-600 text-sm leading-relaxed serif-body">
+                  </div>                  <p className="text-gray-600 text-sm leading-relaxed serif-body">
                     {qual.focus}
                   </p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
-        </div>
+        </motion.div>
 
         {/* Additional Training */}        <motion.div
           initial={{ opacity: 0, y: 30 }}
