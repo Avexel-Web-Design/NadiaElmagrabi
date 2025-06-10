@@ -17,8 +17,8 @@ export default function About() {
     { icon: <GlobeAltIcon className="h-6 w-6" />, text: "Energy Healing Practitioner" }
   ]
 
-  return (
-    <section id="about" className="py-20 relative overflow-hidden">      {/* Background Elements */}
+  return (    <section id="about" className="py-20 relative overflow-hidden">      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-50/40 via-purple-50/20 to-transparent opacity-60"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50 to-transparent opacity-30"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

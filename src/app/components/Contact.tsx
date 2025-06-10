@@ -63,13 +63,14 @@ export default function Contact() {
                 <div className="space-y-6">                  {contactMethods.map((method, index) => (
                     <motion.div
                       key={index}
-                      className="flex items-start space-x-4 p-4 liquid-glass-card rounded-xl motion-safe"
-                      initial={{ opacity: 0, y: 20 }}
+                      className="flex items-start space-x-4 p-4 liquid-glass-card rounded-xl motion-safe"                      initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ 
                         duration: 0.6, 
                         delay: index * 0.15,
-                        ease: "easeOut"
+                        ease: "easeOut",
+                        // Fast transitions for hover states
+                        x: { type: "spring", stiffness: 400, damping: 25 }
                       }}
                       viewport={{ once: true, amount: 0.8 }}
                       whileHover={{ x: 5 }}
@@ -203,8 +204,13 @@ export default function Contact() {
                   type="submit"
                   className="w-full btn-spiritual py-4 text-lg motion-safe"
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
+                  whileInView={{ opacity: 1, y: 0 }}                  transition={{ 
+                    duration: 0.6, 
+                    delay: 1.1, 
+                    ease: "easeOut",
+                    // Fast transitions for hover states
+                    scale: { type: "spring", stiffness: 400, damping: 25 }
+                  }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

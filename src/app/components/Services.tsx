@@ -95,14 +95,15 @@ export default function Services() {
                 service.popular ? 'ring-2 ring-yellow-400 ring-opacity-50' : ''
               }`}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
+              whileInView={{ opacity: 1, y: 0 }}              transition={{ 
                 duration: 0.6, 
                 delay: index * 0.2, 
-                ease: "easeOut" 
-              }}
-              viewport={{ once: true, amount: 0.2 }}
-              whileHover={{ y: -5, scale: 1.02 }}
+                ease: "easeOut",
+                // Fast transitions for hover states
+                y: { type: "spring", stiffness: 400, damping: 25 },
+                scale: { type: "spring", stiffness: 400, damping: 25 }
+              }}viewport={{ once: true, amount: 0.2 }}
+              animate={{ y: 0, scale: 1 }}              whileHover={{ y: -5, scale: 1.02 }}
               style={{ willChange: 'transform, opacity' }}
             >
               {/* Popular Badge */}              {service.popular && (
@@ -119,9 +120,13 @@ export default function Services() {
 
               {/* Service Header */}
               <div className="text-center mb-6">                <motion.div 
-                  className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${service.gradient} text-white mb-4 motion-safe`}
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${service.gradient} text-white mb-4 motion-safe`}                  whileHover={{ rotate: 360 }}
+                  transition={{ 
+                    duration: 0.3, 
+                    ease: "easeInOut",
+                    // Fast exit transition
+                    rotate: { duration: 0.3, ease: "easeInOut" }
+                  }}
                   style={{ willChange: 'transform' }}
                 >
                   {service.icon}
@@ -168,7 +173,7 @@ export default function Services() {
                 className={`block w-full text-center bg-gradient-to-r ${service.gradient} text-white py-4 px-6 rounded-2xl font-semibold motion-safe`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
                 style={{ willChange: 'transform' }}
               >                {service.buttonText}
               </motion.a>
@@ -180,8 +185,16 @@ export default function Services() {
           className="text-center mt-16 motion-safe"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          transition={{ 
+            duration: 0.8, 
+            delay: 0.6, 
+            ease: "easeOut",
+            // Fast transitions for hover states
+            y: { type: "spring", stiffness: 400, damping: 25 },
+            scale: { type: "spring", stiffness: 400, damping: 25 }
+          }}
           viewport={{ once: true }}
+          whileHover={{ y: -5, scale: 1.02 }}
         ><div className="liquid-glass-ultra p-8 rounded-3xl max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-800 mb-4 serif-heading">
               Not Sure Which Path to Choose?
@@ -194,7 +207,11 @@ export default function Services() {
               className="btn-spiritual inline-block motion-safe"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
+              transition={{ 
+                duration: 0.1, 
+                ease: "easeOut",
+                scale: { type: "spring", stiffness: 400, damping: 25 }
+              }}
               style={{ willChange: 'transform' }}
             >
               Schedule Free Consultation

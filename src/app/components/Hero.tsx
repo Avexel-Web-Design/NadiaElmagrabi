@@ -107,12 +107,13 @@ export default function Hero() {
             </motion.a>
           </motion.div>
         </div>
-      </div>      {/* Scroll Indicator */}      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 motion-safe"
+      </div>      {/* Gradient Transition to About Section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-purple-50/30 to-purple-50/60 pointer-events-none z-5"></div>      {/* Scroll Indicator */}      <motion.div 
+        className="absolute bottom-16 left-1/2 transform -translate-x-1/2 motion-safe z-20"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         style={{ willChange: 'transform' }}
-      >        <div className="liquid-glass-ultra p-3 rounded-full">
+      ><div className="liquid-glass-ultra p-3 rounded-full">
           <FontAwesomeIcon 
             icon={faArrowDown} 
             className="text-2xl text-purple-600" 
