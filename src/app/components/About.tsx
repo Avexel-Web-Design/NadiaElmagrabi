@@ -1,8 +1,16 @@
 'use client'
 import { motion } from 'framer-motion'
 import { StarIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
+import { use3DCard } from '../hooks/use3DCard'
 
 export default function About() {
+  const { cardRef, cardProps } = use3DCard({
+    maxRotateX: 12,
+    maxRotateY: 12,
+    scale: 1.03,
+    perspective: 1000
+  })
+
   const credentials = [
     { icon: <AcademicCapIcon className="h-6 w-6" />, text: "Certified Human Design Analyst" },
     { icon: <StarIcon className="h-6 w-6" />, text: "Past Life Regression Therapist" },
@@ -89,25 +97,23 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-          >            <div className="liquid-glass-ultra p-8 rounded-3xl relative overflow-hidden">
-              {/* Placeholder for Nadia's photo */}
-              <div className="aspect-square bg-gradient-to-br from-purple-200 via-yellow-100 to-green-200 rounded-2xl flex items-center justify-center relative overflow-hidden liquid-glass-card">
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-purple-300/30 via-yellow-200/30 to-green-300/30"
-                  animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, 0] 
-                  }}
-                  transition={{ 
-                    duration: 10,
-                    repeat: Infinity,
-                    ease: "easeInOut" 
-                  }}
-                />                <div className="relative z-10 text-center">
-                  <p className="text-gray-600 font-medium serif-heading">
+          >            <div 
+              ref={cardRef}
+              {...cardProps}
+              className="liquid-glass-ultra p-8 rounded-3xl relative overflow-hidden card-3d"
+            >{/* Nadia's photo */}
+              <div className="aspect-square rounded-2xl relative overflow-hidden liquid-glass-card transform-gpu">
+                <img 
+                  src="/images/Nadia/Nadia31.jpg" 
+                  alt="Nadia Elmagrabi - Soul Guide & Healer"
+                  className="w-full h-full object-cover transform-gpu"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 text-white z-10 transform-gpu">
+                  <p className="font-medium serif-heading text-lg">
                     Nadia Elmagrabi
                   </p>
-                  <p className="text-gray-500 text-sm serif-body">
+                  <p className="text-white/90 text-sm serif-body">
                     Soul Guide & Healer
                   </p>
                 </div>

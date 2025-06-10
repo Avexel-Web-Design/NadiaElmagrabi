@@ -57,8 +57,7 @@ export default function Services() {
         "Soul Blueprint Integration",
         "Lifetime Patterns Analysis",
         "Spiritual Purpose Clarity",
-        "Ongoing Email Support",
-        "Bonus: Meditation & Affirmations"
+        "Ongoing Email Support"
       ],
       buttonText: "Begin Complete Journey",
       externalLink: "https://example.com/complete-soul-journey",
