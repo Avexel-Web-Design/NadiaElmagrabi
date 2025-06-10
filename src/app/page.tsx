@@ -1,15 +1,15 @@
-import HeroSection from './components/HeroSection'
-import AboutSection from './components/AboutSection'
-import ServicesSection from './components/ServicesSection'
-import ContactSection from './components/ContactSection'
+import Hero from './components/Hero'
+import About from './components/About'
+import Services from './components/Services'
+import Contact from './components/Contact'
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ContactSection />
+      <Hero />
+      <About />
+      <Services />
+      <Contact />
     </div>
   )
 }

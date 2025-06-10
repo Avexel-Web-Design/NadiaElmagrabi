@@ -98,62 +98,10 @@ export default function Footer() {
           </div>
           
           <div className="text-center md:text-right text-gray-600 serif-body">
-            <p>&copy; {currentYear} Nadia Elmagrabi. All rights reserved.</p>
-            <p className="text-sm mt-1">
-              <span className="text-purple-600">✨</span> 
-              Embrace your cosmic blueprint 
-              <span className="text-purple-600">✨</span>
+            <p>&copy; {currentYear} Nadia Elmagrabi. All rights reserved.</p>            <p className="text-sm mt-1">
+              Embrace your cosmic blueprint
             </p>
-          </div>
-        </motion.div>
-
-        {/* Floating Spiritual Elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <motion.div
-            className="absolute top-10 left-10 text-2xl opacity-20"
-            animate={{ 
-              y: [0, -10, 0],
-              rotate: [0, 5, 0] 
-            }}
-            transition={{ 
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut" 
-            }}
-          >
-            🌙
-          </motion.div>
-          <motion.div
-            className="absolute top-20 right-20 text-xl opacity-20"
-            animate={{ 
-              y: [0, -15, 0],
-              rotate: [0, -5, 0] 
-            }}
-            transition={{ 
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1 
-            }}
-          >
-            ⭐
-          </motion.div>
-          <motion.div
-            className="absolute bottom-10 left-1/4 text-lg opacity-20"
-            animate={{ 
-              y: [0, -8, 0],
-              rotate: [0, 3, 0] 
-            }}
-            transition={{ 
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2 
-            }}
-          >
-            🔮
-          </motion.div>
-        </div>
+          </div>        </motion.div>
       </div>
     </footer>
   )

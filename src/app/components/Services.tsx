@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { StarIcon, EyeIcon, GiftIcon, CheckIcon } from '@heroicons/react/24/outline'
 
-export default function ServicesSection() {
+export default function Services() {
   const services = [
     {
       id: 1,
@@ -69,48 +69,8 @@ export default function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-50 via-transparent to-green-50 opacity-50"></div>      <motion.div
-        className="absolute top-10 left-20 text-4xl motion-safe"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        <motion.div
-          animate={{ 
-            y: [-20, 20, -20],
-            rotate: [0, 10, 0] 
-          }}
-          transition={{ 
-            y: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-            rotate: { duration: 8, repeat: Infinity, ease: "easeInOut" }
-          }}
-          style={{ willChange: 'transform' }}
-        >
-          ⭐
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-20 right-10 text-3xl motion-safe"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-      >        <motion.div
-          animate={{ 
-            y: [-15, 15, -15],
-            rotate: [0, -12, 0] 
-          }}
-          transition={{ 
-            y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-            rotate: { duration: 6, repeat: Infinity, ease: "easeInOut" }
-          }}
-          style={{ willChange: 'transform' }}
-        >
-          🌙
-        </motion.div>
-      </motion.div>
+    <section id="services" className="py-20 relative overflow-hidden">      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-50 via-transparent to-green-50 opacity-50"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}        <motion.div 
@@ -154,7 +114,7 @@ export default function ServicesSection() {
                   transition={{ duration: 0.5, delay: index * 0.2 + 0.3, ease: "easeOut" }}
                   viewport={{ once: true }}
                 >
-                  ✨ Most Popular ✨
+                  Most Popular
                 </motion.div>
               )}
 
@@ -211,24 +171,8 @@ export default function ServicesSection() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 style={{ willChange: 'transform' }}
-              >
-                {service.buttonText}
+              >                {service.buttonText}
               </motion.a>
-
-              {/* Floating Elements */}              <motion.div
-                className="absolute -top-2 -right-2 text-xl opacity-30 motion-safe"
-                animate={{ 
-                  rotate: [0, 360] 
-                }}
-                transition={{ 
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear" 
-                }}
-                style={{ willChange: 'transform' }}
-              >
-                ✨
-              </motion.div>
             </motion.div>
           ))}
         </div>

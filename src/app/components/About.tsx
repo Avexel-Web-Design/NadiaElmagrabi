@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { StarIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline'
 
-export default function AboutSection() {
+export default function About() {
   const credentials = [
     { icon: <AcademicCapIcon className="h-6 w-6" />, text: "Certified Human Design Analyst" },
     { icon: <StarIcon className="h-6 w-6" />, text: "Past Life Regression Therapist" },

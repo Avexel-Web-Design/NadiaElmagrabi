@@ -2,100 +2,18 @@
 import { motion } from 'framer-motion'
 import { SparklesIcon, HeartIcon, EyeIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
-export default function HeroSection() {
+export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     setIsLoaded(true)
   }, [])
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Background Elements */}
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">      {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-yellow-50 to-green-50 opacity-70"></div>
-        {/* Floating Spiritual Elements */}
-      {isLoaded && (        <>
-          <motion.div
-            className="absolute top-20 left-10 text-4xl motion-safe"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ 
-              opacity: 0.3,
-              y: 0
-            }}
-            transition={{ 
-              duration: 1,
-              ease: "easeOut"
-            }}
-          >
-            <motion.div
-              animate={{ 
-                y: [-10, 10, -10],
-                rotate: [0, 10, 0] 
-              }}
-              transition={{ 
-                y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
-                rotate: { duration: 6, repeat: Infinity, ease: "easeInOut" }
-              }}
-            >
-              🌟
-            </motion.div>
-          </motion.div>
-          
-          <motion.div
-            className="absolute top-1/4 right-20 text-3xl motion-safe"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ 
-              opacity: 0.25,
-              y: 0
-            }}
-            transition={{ 
-              duration: 1.2,
-              delay: 0.3,
-              ease: "easeOut"
-            }}
-          >
-            <motion.div
-              animate={{ 
-                y: [-8, 8, -8],
-                rotate: [0, -8, 0] 
-              }}
-              transition={{ 
-                y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 },
-                rotate: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }
-              }}
-            >
-              🌙
-            </motion.div>
-          </motion.div>
-          
-          <motion.div
-            className="absolute bottom-1/4 left-1/4 text-2xl motion-safe"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ 
-              opacity: 0.2,
-              y: 0
-            }}
-            transition={{ 
-              duration: 1.4,
-              delay: 0.6,
-              ease: "easeOut"
-            }}
-          >
-            <motion.div
-              animate={{ 
-                y: [-6, 6, -6],
-                rotate: [0, 6, 0] 
-              }}
-              transition={{ 
-                y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 },
-                rotate: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }
-              }}
-            >
-              ✨
-            </motion.div>
-          </motion.div>
-        </>
-      )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">        <div className="text-center">
           {/* Main Content */}          <motion.div
@@ -201,14 +119,11 @@ export default function HeroSection() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         style={{ willChange: 'transform' }}
-      >
-        <div className="liquid-glass-ultra p-3 rounded-full">
-          <motion.div
-            className="w-1 h-6 bg-gradient-to-b from-purple-600 to-yellow-500 rounded-full mx-auto"
-            animate={{ scaleY: [1, 0.5, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            style={{ willChange: 'transform' }}
-          ></motion.div>
+      >        <div className="liquid-glass-ultra p-3 rounded-full">
+          <FontAwesomeIcon 
+            icon={faArrowDown} 
+            className="text-2xl text-purple-600" 
+          />
         </div>
       </motion.div>
     </section>

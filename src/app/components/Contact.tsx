@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, HeartIcon } from '@heroicons/react/24/outline'
 
-export default function ContactSection() {
+export default function Contact() {
   const contactMethods = [
     {
       icon: <EnvelopeIcon className="h-6 w-6" />,
@@ -28,50 +28,8 @@ export default function ContactSection() {
   ]
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
+    <section id="contact" className="py-20 relative overflow-hidden">      {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-transparent to-purple-50 opacity-60"></div>
-        <motion.div
-        className="absolute top-20 left-10 text-3xl motion-safe"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        <motion.div
-          animate={{ 
-            y: [-15, 15, -15],
-            rotate: [0, 8, 0] 
-          }}
-          transition={{ 
-            y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
-            rotate: { duration: 7, repeat: Infinity, ease: "easeInOut" }
-          }}
-          style={{ willChange: 'transform' }}
-        >
-          💫
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-20 right-20 text-2xl motion-safe"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-      >
-        <motion.div
-          animate={{ 
-            y: [-12, 12, -12],
-            rotate: [0, -6, 0] 
-          }}
-          transition={{ 
-            y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-            rotate: { duration: 5, repeat: Infinity, ease: "easeInOut" }
-          }}
-          style={{ willChange: 'transform' }}
-        >
-          🌸
-        </motion.div>
-      </motion.div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}        <motion.div 
