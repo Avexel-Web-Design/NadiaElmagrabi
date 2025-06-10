@@ -60,19 +60,14 @@ export default function Hero() {
                 icon: <HeartIcon className="h-8 w-8" />,
                 title: "Soul Guidance",
                 description: "Transform your spiritual journey"
-              }            ].map((feature, index) => (
-              <motion.div
+              }            ].map((feature, index) => (              <motion.div
                 key={feature.title}
-                className="liquid-glass-card p-6 rounded-2xl hover:liquid-glass-strong group motion-safe"
-                whileHover={{ y: -5, scale: 1.02 }}
+                className="liquid-glass-card p-6 rounded-2xl group"
+                whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                style={{ 
-                  willChange: 'transform',
-                  animationDelay: `${index * 0.1}s`,
-                  animationFillMode: 'both'
-                }}
+                style={{ transformOrigin: 'center' }}
               >
                 <div className="text-purple-600 mb-4 group-hover:text-yellow-600 transition-colors">
                   {feature.icon}
