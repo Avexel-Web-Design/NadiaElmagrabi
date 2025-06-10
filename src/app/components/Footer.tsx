@@ -78,10 +78,9 @@ export default function Footer() {
           >            <h4 className="text-lg font-semibold text-gray-800 flex items-center serif-heading">
               <SunIcon className="h-5 w-5 mr-2 text-yellow-600" />
               Daily Inspiration
-            </h4>
-            <blockquote className="liquid-glass p-4 rounded-lg italic text-gray-700 serif-body">
-              "Your soul knows the geography of your destiny. Trust the journey 
-              and embrace the wisdom that unfolds."
+            </h4>            <blockquote className="liquid-glass p-4 rounded-lg italic text-gray-700 serif-body">
+              &ldquo;Your soul knows the geography of your destiny. Trust the journey 
+              and embrace the wisdom that unfolds.&rdquo;
             </blockquote>
           </motion.div>
         </div>
