@@ -4,17 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const navRef = useRef<HTMLDivElement>(null)
   const [bubblePosition, setBubblePosition] = useState({ x: 0, width: 80 })
+  
   useEffect(() => {
     setIsLoaded(true)
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-      
       // Detect current section
       const sections = ['home', 'about', 'services', 'contact']
       const scrollY = window.scrollY + 100 // Offset for navbar height
@@ -120,7 +118,7 @@ export default function Navbar() {
                 }}
               />
               
-              {navItems.map((item, index) => (                <motion.a
+              {navItems.map((item) => (                <motion.a
                   key={item.name}
                   href={item.href}
                   className={`text-gray-700 hover:text-purple-800 px-3 py-2 rounded-md text-sm font-medium relative group serif-body z-10 transition-colors duration-300 ${
