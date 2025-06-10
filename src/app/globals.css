@@ -1,107 +1,295 @@
 @import "tailwindcss";
 
 :root {
-  /* Natural Earth Palette - Ultra Muted */
-  --background: #f6f3ed;
-  --foreground: #3a362f;
-  
-  /* Deep earth tones - more natural */
-  --sage: #5a6650;
-  --forest: #2a3622;
-  --earth: #5c4c41;
-  --clay: #8a7865;
-  --cream: #f0ebe3;
-  
-  /* Muted purples - more subdued */
-  --lavender: #6b6375;
-  --amethyst: #443a4d;
-  --deep-purple: #2e2333;
-  
-  /* Natural blues - softer */
-  --sky: #6b7380;
-  --ocean: #3c454f;
-  --midnight: #232b33;
-  
-  /* Warm earth accents - toned down */
-  --gold: #9d8757;
-  --copper: #7a5d3f;
-  --rose: #8a6e62;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-serif: var(--font-garamond), var(--font-crimson), serif;
-  --font-sans: var(--font-crimson), serif;
-  --color-sage: var(--sage);
-  --color-forest: var(--forest);
-  --color-earth: var(--earth);
-  --color-clay: var(--clay);
-  --color-cream: var(--cream);
-  --color-lavender: var(--lavender);
-  --color-amethyst: var(--amethyst);
-  --color-deep-purple: var(--deep-purple);
-  --color-sky: var(--sky);
-  --color-ocean: var(--ocean);
-  --color-midnight: var(--midnight);
-  --color-gold: var(--gold);
-  --color-copper: var(--copper);
-  --color-rose: var(--rose);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1f1d1a;
-    --foreground: #ede8e0;
-  }
+  --earth-brown: #8B4513;
+  --sage-green: #9CAF88;
+  --warm-gold: #DAA520;
+  --deep-purple: #4A0E4E;
+  --soft-cream: #FAF7F2;
+  --mist-white: #F8F8FF;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-crimson), serif;
-  line-height: 1.7;
+  font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+  background: linear-gradient(135deg, var(--soft-cream) 0%, var(--mist-white) 100%);
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeInBody 0.5s ease-out 0.1s forwards;
+  will-change: opacity;
+  transform: translateZ(0);
 }
 
-/* Custom spiritual styles */
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Prevent animation flash on load */
+.no-animations * {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+.no-animations *:before,
+.no-animations *:after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Smooth page load */
+html {
+  overflow-x: hidden;
+}
+
+/* Prevent layout shift */
+* {
+  box-sizing: border-box;
+}
+
+/* Liquid Glass Effect - Optimized for animations */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  will-change: transform, opacity;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.liquid-glass-strong {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(255, 255, 255, 0.3);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.liquid-glass-ultra {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 35px;
+  box-shadow: 
+    0 16px 50px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    0 2px 6px rgba(255, 255, 255, 0.4);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.liquid-glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 28px;
+  box-shadow: 
+    0 10px 35px rgba(0, 0, 0, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Spiritual Gradient Text */
 .spiritual-gradient {
-  background: linear-gradient(135deg, var(--sage) 0%, var(--amethyst) 50%, var(--ocean) 100%);
+  background: linear-gradient(135deg, var(--deep-purple), var(--warm-gold), var(--sage-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
 }
 
-.earth-gradient {
-  background: linear-gradient(135deg, var(--earth) 0%, var(--clay) 50%, var(--gold) 100%);
+/* Serif Text Classes */
+.serif-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
 }
 
-.nature-gradient {
-  background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 30%, var(--clay) 70%, var(--copper) 100%);
+.serif-body {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-weight: 400;
 }
 
-.muted-spiritual {
-  background: linear-gradient(135deg, var(--lavender) 0%, var(--sky) 50%, var(--earth) 100%);
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
-.sacred-text {
-  font-family: var(--font-garamond), serif;
-  letter-spacing: 0.025em;
+.float-animation {
+  animation: float 6s ease-in-out infinite;
 }
 
-.body-text {
-  font-family: var(--font-crimson), serif;
-  line-height: 1.8;
+/* Gentle Pulse */
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
 }
 
-.divine-shadow {
-  box-shadow: 0 10px 30px rgba(92, 76, 65, 0.08), 0 4px 8px rgba(92, 76, 65, 0.05);
+.gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
 }
 
-.mystical-border {
-  border: 1px solid rgba(90, 102, 80, 0.2);
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.earth-shadow {
-  box-shadow: 0 8px 25px rgba(90, 102, 80, 0.1), 0 3px 6px rgba(138, 120, 101, 0.06);
+::-webkit-scrollbar-track {
+  background: rgba(156, 175, 136, 0.1);
 }
 
-.soft-glow {
-  box-shadow: 0 0 20px rgba(157, 135, 87, 0.1);
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--sage-green), var(--warm-gold));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--warm-gold), var(--deep-purple));
+}
+
+/* Smooth Transitions - More specific to prevent conflicts */
+button,
+a,
+input,
+textarea,
+select {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, 
+              opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Only apply transform transitions to non-motion elements */
+:not([class*="motion"]):not([style*="animation"]):not([style*="transform"]) {
+  transition: transform 0.3s ease;
+}
+
+/* Button Hover Effects - Optimized */
+.btn-spiritual {
+  background: linear-gradient(135deg, var(--sage-green), var(--warm-gold));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0) translateZ(0);
+  box-shadow: 0 4px 15px rgba(156, 175, 136, 0.3);
+  will-change: transform, box-shadow;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-spiritual:hover {
+  transform: translateY(-2px) translateZ(0);
+  box-shadow: 0 8px 25px rgba(156, 175, 136, 0.4);
+}
+
+.btn-spiritual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+  will-change: left;
+}
+
+.btn-spiritual:hover::before {
+  left: 100%;
+}
+
+/* Animation Optimization - Prevent flash */
+.animate-optimized {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.motion-safe {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Disable CSS transitions on motion elements to prevent conflicts */
+.motion-safe,
+.motion-safe *,
+[class*="motion-"] {
+  transition: none !important;
+}
+
+/* Re-enable specific transitions only where needed */
+.motion-safe .transition-colors {
+  transition: color 0.3s ease !important;
+}
+
+/* Liquid glass hover effects - prevent conflicts */
+.motion-safe .hover\:liquid-glass-strong:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(40px) !important;
+  -webkit-backdrop-filter: blur(40px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Service card specific optimization */
+.motion-safe .liquid-glass-ultra {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease !important;
+}
+
+/* Contact section specific fixes */
+.motion-safe .liquid-glass-card:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(40px) !important;
+  -webkit-backdrop-filter: blur(40px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  transform: translateX(5px) !important;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Prevent input field transition conflicts */
+.motion-safe input,
+.motion-safe textarea,
+.motion-safe select {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Smooth hardware-accelerated animations */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-animate {
+    animation-fill-mode: both;
+    transform: translateZ(0);
+  }
+}
+
+/* Prevent animation flash on initial load */
+.no-flash {
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+
+/* Force GPU acceleration for better performance */
+.gpu-accelerated {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
