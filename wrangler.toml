@@ -1,0 +1,6 @@
+# Cloudflare Pages configuration
+compatibility_date = "2025-06-10"
+
+[build]
+command = "npm run build"
+publish = ".next"
