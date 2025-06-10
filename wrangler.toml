@@ -2,5 +2,7 @@
 compatibility_date = "2025-06-10"
 
 [build]
-command = "npm run build"
-publish = ".next"
+command = "npm run build:cf"
+
+# This is the key property for Pages
+pages_build_output_dir = ".next"
