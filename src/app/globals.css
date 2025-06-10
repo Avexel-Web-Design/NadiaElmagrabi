@@ -53,55 +53,51 @@ html {
 
 /* Liquid Glass Effect - Optimized for animations */
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 25px;
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
   will-change: transform, opacity;
   transform: translateZ(0); /* Force hardware acceleration */
 }
 
 .liquid-glass-strong {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   box-shadow: 
     0 12px 40px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    0 1px 3px rgba(255, 255, 255, 0.3);
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 1px 3px rgba(255, 255, 255, 0.2);
   will-change: transform, opacity;
   transform: translateZ(0);
 }
 
 .liquid-glass-ultra {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(60px);
   -webkit-backdrop-filter: blur(60px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 35px;
   box-shadow: 
     0 16px 50px rgba(0, 0, 0, 0.2),
-    inset 0 2px 4px rgba(255, 255, 255, 0.6),
-    0 2px 6px rgba(255, 255, 255, 0.4);
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    0 2px 6px rgba(255, 255, 255, 0.25);
   will-change: transform, opacity;
   transform: translateZ(0);
 }
 
 .liquid-glass-card {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 28px;
   box-shadow: 
     0 10px 35px rgba(0, 0, 0, 0.12),
-    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
   will-change: transform, opacity;
   transform: translateZ(0);
 }
@@ -245,11 +241,10 @@ select {
 
 /* Liquid glass hover effects - prevent conflicts */
 .motion-safe .hover\:liquid-glass-strong:hover {
-  background: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
   backdrop-filter: blur(40px) !important;
   -webkit-backdrop-filter: blur(40px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease !important;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease !important;
 }
 
 /* Service card specific optimization */
@@ -259,11 +254,10 @@ select {
 
 /* Contact section specific fixes */
 .motion-safe .liquid-glass-card:hover {
-  background: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
   backdrop-filter: blur(40px) !important;
   -webkit-backdrop-filter: blur(40px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.4) !important;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease !important;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease !important;
 }
 
 /* Prevent input field transition conflicts */
