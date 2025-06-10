@@ -4,33 +4,37 @@ This project is configured to work with Cloudflare Pages' 25 MiB file size limit
 
 ## Deployment Configuration
 
-The project includes a `wrangler.toml` file that configures:
-- **Build Command**: `npm run build:cf` (builds and removes cache files)
-- **Output Directory**: `.next`
-- **Pages Build Output**: `pages_build_output_dir = ".next"`
+The project is configured to automatically work with Cloudflare Pages using the standard build command.
 
 ## Build Commands
 
-- **Local Development**: `npm run build` (standard build)
-- **Cloudflare Deployment**: `npm run build:cf` (build + cache removal)
+- **Production Build**: `npm run build` (builds and removes cache files automatically)
+- **Local Development Build**: `npm run build:local` (standard build without cache removal)
+- **Development Server**: `npm run dev`
 
-## File Size Management
+## Cache Management
 
-The `build:cf` command:
+The default `npm run build` command automatically:
 1. Runs `next build` to create the production build
-2. Automatically removes the `.next/cache` directory using Node.js
-3. Ensures all files are under the 25 MiB limit
+2. Removes the `.next/cache` directory using Node.js to prevent size limit issues
+3. Displays "Cache directory removed for deployment" confirmation
 
-## Current File Sizes
+## File Size Verification
 
 All files are well under the 25 MiB limit:
-- Largest file: `vendors-*.js` (~468KB)
-- Framework files: ~178KB
-- Main chunks: ~164KB
+- Largest files: `vendors-*.js` (~140KB)
+- Framework chunks: ~53KB
+- Application bundles: ~5KB
+
+## Cloudflare Pages Setup
+
+1. **Build Command**: `npm run build` (default)
+2. **Output Directory**: `.next`
+3. **Node.js Version**: 22.x (automatically detected)
 
 ## Notes
 
+- **No wrangler.toml needed**: Uses Cloudflare's default detection
 - **ESLint**: Disabled during builds to prevent deployment failures
-- **Cache Removal**: Automatically handled by the build:cf script
-- **Cross-Platform**: Uses Node.js for cache removal (works on Windows/Linux)
-- **Webpack Optimization**: Aggressive chunk splitting keeps files small
+- **Cross-Platform**: Cache removal works on both Windows and Linux
+- **Automatic**: No manual steps required for deployment
