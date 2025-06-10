@@ -1,9 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
 import { HeartIcon, SparklesIcon, SunIcon } from '@heroicons/react/24/outline'
+import { useDailyQuote } from '../hooks/useDailyQuote'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const dailyQuote = useDailyQuote()
 
   const socialLinks = [
     { name: 'Instagram', href: '#', icon: '📸' },
@@ -78,9 +80,9 @@ export default function Footer() {
           >            <h4 className="text-lg font-semibold text-gray-800 flex items-center serif-heading">
               <SunIcon className="h-5 w-5 mr-2 text-yellow-600" />
               Daily Inspiration
-            </h4>            <blockquote className="liquid-glass p-4 rounded-lg italic text-gray-700 serif-body">
-              &ldquo;Your soul knows the geography of your destiny. Trust the journey 
-              and embrace the wisdom that unfolds.&rdquo;
+            </h4>
+            <blockquote className="liquid-glass p-4 rounded-lg italic text-gray-700 serif-body">
+              &ldquo;{dailyQuote}&rdquo;
             </blockquote>
           </motion.div>
         </div>
