@@ -10,28 +10,8 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50 to-transparent opacity-30"></div>      <motion.div
-        className="absolute top-20 right-10 text-3xl motion-safe"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        <motion.div
-          animate={{ 
-            y: [-15, 15, -15],
-            rotate: [0, 15, 0] 
-          }}
-          transition={{ 
-            y: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-            rotate: { duration: 8, repeat: Infinity, ease: "easeInOut" }
-          }}
-          style={{ willChange: 'transform' }}
-        >
-          🌺
-        </motion.div>
-      </motion.div>
+    <section id="about" className="py-20 relative overflow-hidden">      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50 to-transparent opacity-30"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -126,22 +106,7 @@ export default function About() {
                     repeat: Infinity,
                     ease: "easeInOut" 
                   }}
-                />
-                
-                <div className="relative z-10 text-center">
-                  <motion.div
-                    className="text-6xl mb-4"
-                    animate={{ 
-                      scale: [1, 1.1, 1] 
-                    }}
-                    transition={{ 
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut" 
-                    }}
-                  >
-                    🌟
-                  </motion.div>
+                />                <div className="relative z-10 text-center">
                   <p className="text-gray-600 font-medium serif-heading">
                     Nadia Elmagrabi
                   </p>
@@ -150,38 +115,9 @@ export default function About() {
                   </p>
                 </div>
               </div>
-
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute -top-2 -right-2 text-2xl"
-                animate={{ 
-                  rotate: [0, 360] 
-                }}
-                transition={{ 
-                  duration: 15,
-                  repeat: Infinity,
-                  ease: "linear" 
-                }}
-              >
-                ✨
-              </motion.div>
-              
-              <motion.div
-                className="absolute -bottom-2 -left-2 text-xl"
-                animate={{ 
-                  y: [0, -10, 0] 
-                }}
-                transition={{ 
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut" 
-                }}
-              >
-                🔮
-              </motion.div>
             </div>
 
-            {/* Testimonial Quote */}            <motion.div
+            {/* Testimonial Quote */}<motion.div
               className="mt-6 liquid-glass-card p-6 rounded-2xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
