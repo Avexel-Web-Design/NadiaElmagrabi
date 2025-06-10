@@ -40,12 +40,11 @@ export default function Education() {
 
   return (
     <section id="education" className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
@@ -73,7 +72,7 @@ export default function Education() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${qual.color}-100 mb-4`}>
@@ -99,12 +98,11 @@ export default function Education() {
           </div>
         </div>
 
-        {/* Additional Training */}
-        <motion.div
+        {/* Additional Training */}        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center serif-heading">
@@ -113,11 +111,10 @@ export default function Education() {
           <div className="grid md:grid-cols-2 gap-4">
             {additionalTraining.map((training, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
+                key={index}                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 className="flex items-center p-4 bg-gradient-to-r from-purple-50 to-yellow-50 rounded-lg"
               >
                 <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -129,9 +126,8 @@ export default function Education() {
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mt-12 text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-yellow-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">

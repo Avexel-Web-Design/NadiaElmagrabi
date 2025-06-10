@@ -32,12 +32,11 @@ export default function Background() {
 
   return (
     <section id="background" className="py-20 bg-white/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
@@ -52,13 +51,12 @@ export default function Background() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {experiences.map((experience, index) => (
-            <motion.div
+          {experiences.map((experience, index) => (            <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.1 }}
               className="bg-gradient-to-br from-white to-purple-50/50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-start justify-between mb-4">
@@ -79,13 +77,11 @@ export default function Background() {
               </p>
             </motion.div>
           ))}
-        </div>
-
-        <motion.div
+        </div>        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-purple-100 to-yellow-100 rounded-2xl p-8 max-w-4xl mx-auto">
