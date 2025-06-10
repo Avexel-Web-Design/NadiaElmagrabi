@@ -10,11 +10,17 @@ export default function Footer() {
   const socialLinks = [
     { name: 'Instagram', href: '#', icon: '📸' },
     { name: 'Facebook', href: '#', icon: '👤' },
-    { name: 'Email', href: 'mailto:nadia@example.com', icon: '✉️' },
-  ]
+    { name: 'Email', href: 'mailto:nadia@example.com', icon: '✉️' },  ]
 
   return (
-    <footer className="liquid-glass-strong mt-20">
+    <footer 
+      className="liquid-glass-strong mt-20"
+      style={{ 
+        borderRadius: '30px 30px 0 0',
+        borderBottomLeftRadius: '0',
+        borderBottomRightRadius: '0'
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
@@ -22,8 +28,8 @@ export default function Footer() {
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >            <h3 className="text-2xl font-bold spiritual-gradient serif-heading">
+            transition={{ duration: 0.6 }}          >
+            <h3 className="text-2xl font-bold spiritual-gradient serif-heading">
               Nadia Elmagrabi
             </h3>
             <p className="text-gray-600 leading-relaxed serif-body">
@@ -51,8 +57,8 @@ export default function Footer() {
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >            <h4 className="text-lg font-semibold text-gray-800 flex items-center serif-heading">
+            transition={{ duration: 0.6, delay: 0.2 }}          >
+            <h4 className="text-lg font-semibold text-gray-800 flex items-center serif-heading">
               <SparklesIcon className="h-5 w-5 mr-2 text-purple-600" />
               Quick Links
             </h4>
@@ -76,13 +82,12 @@ export default function Footer() {
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >            <h4 className="text-lg font-semibold text-gray-800 flex items-center serif-heading">
+            transition={{ duration: 0.6, delay: 0.4 }}          >
+            <h4 className="text-lg font-semibold text-gray-800 flex items-center serif-heading">
               <SunIcon className="h-5 w-5 mr-2 text-yellow-600" />
               Daily Inspiration
-            </h4>
-            <blockquote className="liquid-glass p-4 rounded-lg italic text-gray-700 serif-body">
-              &ldquo;{dailyQuote}&rdquo;
+            </h4>            <blockquote className="liquid-glass p-4 rounded-lg italic text-gray-700 serif-body">
+              "{dailyQuote}"
             </blockquote>
           </motion.div>
         </div>
@@ -92,17 +97,20 @@ export default function Footer() {
           className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >          <div className="flex items-center space-x-2 text-gray-600 mb-4 md:mb-0 serif-body">
+          transition={{ duration: 0.6, delay: 0.6 }}        >
+          <div className="flex items-center space-x-2 text-gray-600 mb-4 md:mb-0 serif-body">
             <HeartIcon className="h-4 w-4 text-red-400" />
-            <span>Made with love by <a href="https://avexel.co" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 transition-colors">Avexel</a></span>
+            <span>Made with love by </span>
+            <a href="https://avexel.co" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 transition-colors">Avexel</a>
           </div>
           
           <div className="text-center md:text-right text-gray-600 serif-body">
-            <p>&copy; {currentYear} Nadia Elmagrabi. All rights reserved.</p>            <p className="text-sm mt-1">
+            <p>&copy; {currentYear} Nadia Elmagrabi. All rights reserved.</p>
+            <p className="text-sm mt-1">
               Embrace your cosmic blueprint
             </p>
-          </div>        </motion.div>
+          </div>
+        </motion.div>
       </div>
     </footer>
   )
