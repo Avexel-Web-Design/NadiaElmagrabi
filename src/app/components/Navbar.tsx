@@ -3,14 +3,46 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const navItems = [
+    { name: 'Home', href: '/', id: 'home' },
+    { name: 'About', href: '/about', id: 'about' },
+  ]
+  
+  // Helper function to normalize pathname for matching
+  const normalizePathname = (path: string) => {
+    return path === '/' ? '/' : path.replace(/\/$/, '')
+  }
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState('home')
+  const [activeSection, setActiveSection] = useState(() => {
+    // Initialize with a function to ensure pathname is available
+    console.log('Initial pathname:', pathname)
+    const normalizedPathname = normalizePathname(pathname)
+    console.log('Normalized pathname:', normalizedPathname)
+    const currentNavItem = navItems.find(item => item.href === normalizedPathname)
+    console.log('Initial nav item found:', currentNavItem)
+    const initialSection = currentNavItem ? currentNavItem.id : 'home'
+    console.log('Initial active section:', initialSection)
+    return initialSection
+  })
   const navRef = useRef<HTMLDivElement>(null)
-  const [bubblePosition, setBubblePosition] = useState({ x: 0, width: 80 })
+  const [bubblePosition, setBubblePosition] = useState({ x: 0, width: 80 })  // Set active section based on current pathname
+  useEffect(() => {
+    console.log('Pathname changed:', pathname)
+    const normalizedPathname = normalizePathname(pathname)
+    console.log('Normalized pathname:', normalizedPathname)
+    const currentNavItem = navItems.find(item => item.href === normalizedPathname)
+    console.log('Current nav item:', currentNavItem)
+    if (currentNavItem) {
+      console.log('Setting active section to:', currentNavItem.id)
+      setActiveSection(currentNavItem.id)
+    }
+  }, [pathname, navItems])
   
   useEffect(() => {
     setIsLoaded(true)
@@ -36,53 +68,55 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     handleScroll() // Initial check
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-  
-  const navItems = [
-    { name: 'Home', href: '/', id: 'home' },
-    { name: 'About', href: '/about', id: 'about' },
-  ]
-  
-  // Calculate bubble position when active section changes
+  }, [])  // Calculate bubble position when active section changes
   useEffect(() => {
+    console.log('Bubble calculation triggered. activeSection:', activeSection, 'isLoaded:', isLoaded)
     if (navRef.current && isLoaded) {
-      const activeIndex = navItems.findIndex(item => item.id === activeSection)
-      if (activeIndex !== -1) {
-        const navItem = navRef.current.children[activeIndex + 1] as HTMLElement // +1 because bubble is first child
-        if (navItem) {
-          const navRect = navRef.current.getBoundingClientRect()
-          const itemRect = navItem.getBoundingClientRect()
-          setBubblePosition({
-            x: itemRect.left - navRect.left - 8, // -8 for padding adjustment
-            width: itemRect.width + 16 // +16 for padding
-          })
+      // Use requestAnimationFrame to ensure DOM is fully rendered
+      requestAnimationFrame(() => {
+        const activeIndex = navItems.findIndex(item => item.id === activeSection)
+        console.log('Active index:', activeIndex, 'for section:', activeSection)
+        if (activeIndex !== -1) {
+          const navItem = navRef.current?.children[activeIndex + 1] as HTMLElement // +1 because bubble is first child
+          console.log('Nav item found:', navItem)
+          if (navItem) {
+            const navRect = navRef.current!.getBoundingClientRect()
+            const itemRect = navItem.getBoundingClientRect()
+            const newPosition = {
+              x: itemRect.left - navRect.left - 8, // -8 for padding adjustment
+              width: itemRect.width + 16 // +16 for padding
+            }
+            console.log('Setting bubble position:', newPosition)
+            setBubblePosition(newPosition)
+          }
         }
-      }
+      })
     }
-  }, [activeSection, isLoaded])
-  
+  }, [activeSection, isLoaded, pathname, navItems])
   // Handle window resize for bubble repositioning
   useEffect(() => {
     const handleResize = () => {
       if (navRef.current && isLoaded) {
-        const activeIndex = navItems.findIndex(item => item.id === activeSection)
-        if (activeIndex !== -1) {
-          const navItem = navRef.current.children[activeIndex + 1] as HTMLElement
-          if (navItem) {
-            const navRect = navRef.current.getBoundingClientRect()
-            const itemRect = navItem.getBoundingClientRect()
-            setBubblePosition({
-              x: itemRect.left - navRect.left - 8,
-              width: itemRect.width + 16
-            })
+        requestAnimationFrame(() => {
+          const activeIndex = navItems.findIndex(item => item.id === activeSection)
+          if (activeIndex !== -1) {
+            const navItem = navRef.current?.children[activeIndex + 1] as HTMLElement
+            if (navItem) {
+              const navRect = navRef.current!.getBoundingClientRect()
+              const itemRect = navItem.getBoundingClientRect()
+              setBubblePosition({
+                x: itemRect.left - navRect.left - 8,
+                width: itemRect.width + 16
+              })
+            }
           }
-        }
+        })
       }
     }
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [activeSection, isLoaded])
+  }, [activeSection, isLoaded, navItems])
   
   return (    <motion.nav
       initial={{ y: -100, opacity: 0 }}
