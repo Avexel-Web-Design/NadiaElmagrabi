@@ -2,10 +2,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const navRef = useRef<HTMLDivElement>(null)
   const [bubblePosition, setBubblePosition] = useState({ x: 0, width: 80 })
@@ -13,8 +15,9 @@ export default function Navbar() {
   useEffect(() => {
     setIsLoaded(true)
     const handleScroll = () => {
-      // Detect current section
-      const sections = ['home', 'about', 'services', 'contact']
+      setIsScrolled(window.scrollY > 10)
+        // Detect current section
+      const sections = ['home', 'about']
       const scrollY = window.scrollY + 100 // Offset for navbar height
       
       for (const sectionId of sections) {
@@ -29,18 +32,15 @@ export default function Navbar() {
             break
           }
         }
-      }
-    }
-    
+      }    }    
     window.addEventListener('scroll', handleScroll)
     handleScroll() // Initial check
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+  
   const navItems = [
-    { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Services', href: '#services', id: 'services' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
+    { name: 'Home', href: '/', id: 'home' },
+    { name: 'About', href: '/about', id: 'about' },
   ]
   
   // Calculate bubble position when active section changes
@@ -117,19 +117,19 @@ export default function Navbar() {
                   mass: 0.8,
                 }}
               />
-              
-              {navItems.map((item) => (                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  className={`text-gray-700 hover:text-purple-800 px-3 py-2 rounded-md text-sm font-medium relative group serif-body z-10 transition-colors duration-300 ${
-                    activeSection === item.id ? 'text-purple-800 font-semibold' : ''
-                  }`}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ y: 0 }}
-                  onClick={() => setActiveSection(item.id)}
-                >
-                  {item.name}
-                </motion.a>
+                {navItems.map((item, index) => (
+                <Link key={item.name} href={item.href}>
+                  <motion.div
+                    className={`text-gray-700 hover:text-purple-800 px-3 py-2 rounded-md text-sm font-medium relative group serif-body z-10 transition-colors duration-300 cursor-pointer ${
+                      activeSection === item.id ? 'text-purple-800 font-semibold' : ''
+                    }`}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ y: 0 }}
+                    onClick={() => setActiveSection(item.id)}
+                  >
+                    {item.name}
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </div>
@@ -167,17 +167,17 @@ export default function Navbar() {
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden bg-white/90 backdrop-blur-sm mx-4 my-2 rounded-2xl overflow-hidden shadow-lg"
             >
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-purple-800 block px-3 py-2 rounded-md text-base font-medium serif-body"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  whileHover={{ x: 10 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {item.name}
-                </motion.a>
+            <div className="px-2 pt-2 pb-3 space-y-1">              {navItems.map((item) => (
+                <Link key={item.name} href={item.href}>
+                  <motion.div
+                    className="text-gray-700 hover:text-purple-800 block px-3 py-2 rounded-md text-base font-medium serif-body cursor-pointer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    whileHover={{ x: 10 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {item.name}
+                  </motion.div>
+                </Link>
               ))}
               <motion.a
                 href="#services"
