@@ -95,7 +95,7 @@ export default function Footer() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >          <div className="flex items-center space-x-2 text-gray-600 mb-4 md:mb-0 serif-body">
             <HeartIcon className="h-4 w-4 text-red-400" />
-            <span>Made with love for spiritual seekers</span>
+            <span>Made with love by <a href="https://avexel.co" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 transition-colors">Avexel</a></span>
           </div>
           
           <div className="text-center md:text-right text-gray-600 serif-body">
