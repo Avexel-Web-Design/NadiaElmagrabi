@@ -1,10 +1,10 @@
 {
   "name": "nadia-elmagrabi-website",
   "version": "0.1.0",
-  "private": true,
-  "scripts": {
+  "private": true,  "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:cloudflare": "next build && powershell Remove-Item -Recurse -Force .next/cache -ErrorAction SilentlyContinue",
     "start": "next start",
     "lint": "next lint"
   },
