@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,  "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "build:cloudflare": "next build && powershell Remove-Item -Recurse -Force .next/cache -ErrorAction SilentlyContinue",
+    "build": "next build && node -e \"const fs = require('fs'); const path = require('path'); const cacheDir = path.join('.next', 'cache'); if (fs.existsSync(cacheDir)) { fs.rmSync(cacheDir, { recursive: true, force: true }); console.log('Cache directory removed for deployment'); }\"",
+    "build:local": "next build",
     "start": "next start",
     "lint": "next lint"
   },
