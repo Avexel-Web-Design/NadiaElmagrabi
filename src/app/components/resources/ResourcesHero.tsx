@@ -1,10 +1,11 @@
 'use client'
 import { motion } from 'framer-motion'
-import { MicrophoneIcon, SpeakerWaveIcon, HeartIcon } from '@heroicons/react/24/outline'
+import { BookOpenIcon, PlayIcon, HeartIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react'
 
-export default function PodcastHero() {
+export default function ResourcesHero() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   useEffect(() => {
     setIsLoaded(true)
@@ -22,7 +23,7 @@ export default function PodcastHero() {
             className="mb-8 motion-safe"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 serif-heading">
-              <span className="spiritual-gradient">Podcasts</span>
+              <span className="spiritual-gradient">Resources</span>
             </h1>
 
             <motion.p 
@@ -31,8 +32,8 @@ export default function PodcastHero() {
               animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             >
-              From insightful conversations to sharing my personal journey, I've had the privilege
-              of joining incredible podcasts to discuss topics I am truly passionate about.
+              Discover a curated collection of transformational tools, guided sessions, and wisdom 
+              to support you on your spiritual journey of self-discovery and healing.
             </motion.p>
           </motion.div>
 
@@ -45,28 +46,41 @@ export default function PodcastHero() {
           >
             {[
               {
-                icon: <MicrophoneIcon className="h-8 w-8" />,
-                title: "Authentic Conversations",
-                description: "Real stories and genuine insights"
-              },
+                icon: <BookOpenIcon className="h-8 w-8" />,
+                title: "Curated Tools",
+                description: "Handpicked resources for transformation"              },
               {
-                icon: <SpeakerWaveIcon className="h-8 w-8" />,
-                title: "Wisdom Sharing",
-                description: "Tools and guidance for your journey"
+                icon: <PlayIcon className="h-8 w-8" />,
+                title: "Guided Sessions",
+                description: "Immersive experiences for healing"
               },
               {
                 icon: <HeartIcon className="h-8 w-8" />,
                 title: "Heart-Centered",
-                description: "Speaking from the soul with love"
+                description: "Tools created with love and intention"
               }
-            ].map((feature, index) => (
-              <motion.div
+            ].map((feature, index) => (              <motion.div
                 key={index}
-                className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-200 group"
                 initial={{ opacity: 0, y: 20 }}
-                animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
+                animate={
+                  isLoaded 
+                    ? hoveredIndex === index
+                      ? { opacity: 1, y: -8, scale: 1.05 }
+                      : { opacity: 1, y: 0, scale: 1 }
+                    : { opacity: 0, y: 20 }
+                }
+                transition={{ 
+                  duration: hoveredIndex === index ? 0.3 : 0.15, 
+                  delay: isLoaded ? 0 : 0.8 + index * 0.1,
+                  ease: "easeOut" 
+                }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                whileTap={{ 
+                  scale: 0.98,
+                  transition: { duration: 0.1 }
+                }}
               >
                 <div className="text-purple-600 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}

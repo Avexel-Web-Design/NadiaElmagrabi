@@ -10,7 +10,7 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', href: '/', id: 'home' },
     { name: 'About', href: '/about', id: 'about' },
-    { name: 'Podcasts', href: '/podcasts', id: 'podcasts' },
+    { name: 'Resources', href: '/resources', id: 'resources' },
   ]
   
   // Helper function to normalize pathname for matching
@@ -49,7 +49,7 @@ export default function Navbar() {
     setIsLoaded(true)
     const handleScroll = () => {      setIsScrolled(window.scrollY > 10)
         // Detect current section
-      const sections = ['home', 'about', 'podcasts']
+      const sections = ['home', 'about', 'resources']
       const scrollY = window.scrollY + 100 // Offset for navbar height
       
       for (const sectionId of sections) {
