@@ -1,8 +1,10 @@
 'use client'
 import { motion } from 'framer-motion'
 import { AcademicCapIcon, TrophyIcon, SparklesIcon } from '@heroicons/react/24/outline'
+import { useDelayedAnimation, useStaggeredAnimation } from '../../hooks/useStaggeredAnimation'
 
 export default function Education() {
+  const isLoaded = useDelayedAnimation(100) // Start animations 100ms after component mounts
   const qualifications = [
     {
       degree: "Master of Divinity",
@@ -42,9 +44,8 @@ export default function Education() {
     <section id="education" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
@@ -59,9 +60,8 @@ export default function Education() {
         </motion.div>        {/* Formal Education */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true, amount: 0.1 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center serif-heading">
@@ -95,38 +95,40 @@ export default function Education() {
               )
             })}
           </div>
-        </motion.div>
-
-        {/* Additional Training */}        <motion.div
+        </motion.div>        {/* Additional Training */}        <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true, amount: 0.1 }}
           className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center serif-heading">
             Specialized Training & Certifications
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
-            {additionalTraining.map((training, index) => (
-              <motion.div
-                key={index}                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true, amount: 0.1 }}
-                className="flex items-center p-4 bg-gradient-to-r from-purple-50 to-yellow-50 rounded-lg"
-              >
-                <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
-                <span className="text-gray-700 serif-body">{training}</span>
-              </motion.div>
-            ))}
+            {additionalTraining.map((training, index) => {
+              const TrainingItem = ({ training, index }: { training: string, index: number }) => {
+                const isVisible = useStaggeredAnimation(600 + index * 100) // Start 600ms after component, stagger by 100ms
+                
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="flex items-center p-4 bg-gradient-to-r from-purple-50 to-yellow-50 rounded-lg"
+                  >
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700 serif-body">{training}</span>
+                  </motion.div>
+                )
+              }
+              
+              return <TrainingItem key={index} training={training} index={index} />
+            })}
           </div>
-        </motion.div>
-
-        <motion.div
+        </motion.div>        <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
           className="mt-12 text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-yellow-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">

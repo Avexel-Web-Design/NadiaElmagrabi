@@ -33,11 +33,6 @@ export default function PodcastHero() {
             >
               From insightful conversations to sharing my personal journey, I've had the privilege
               of joining incredible podcasts to discuss topics I am truly passionate about.
-              <br />
-              <span className="font-semibold text-purple-700 serif-heading">
-                Explore the episodes below to dive into stories, ideas, and tips
-                that I've shared with amazing hosts around the world.
-              </span>
             </motion.p>
           </motion.div>
 

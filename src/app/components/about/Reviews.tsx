@@ -1,8 +1,10 @@
 'use client'
 import { motion } from 'framer-motion'
 import { StarIcon, HeartIcon, ChatBubbleLeftEllipsisIcon } from '@heroicons/react/24/solid'
+import { useDelayedAnimation, useStaggeredAnimation } from '../../hooks/useStaggeredAnimation'
 
 export default function Reviews() {
+  const isLoaded = useDelayedAnimation(100) // Start animations 100ms after component mounts
   const reviews = [
     {
       name: "Sarah M.",
@@ -62,9 +64,8 @@ export default function Reviews() {
     <section id="reviews" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.1 }}
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
@@ -76,53 +77,59 @@ export default function Reviews() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-body">
             Hear from those who have experienced transformation through our work together
           </p>
-        </motion.div>
-
-        <motion.div
+        </motion.div>        <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true, amount: 0.1 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {reviews.map((review, index) => (            <div
-              key={index}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="flex items-center mb-4">
-                <div className="flex space-x-1 mr-3">
-                  {renderStars(review.rating)}
-                </div>
-                <span className="text-sm text-gray-500 serif-body">
-                  {review.service}
-                </span>
-              </div>
+          {reviews.map((review, index) => {
+            const ReviewCard = ({ review, index }: { review: any, index: number }) => {
+              const isVisible = useStaggeredAnimation(400 + index * 100) // Start 400ms after component, stagger by 100ms
               
-              <div className="mb-4">
-                <ChatBubbleLeftEllipsisIcon className="h-6 w-6 text-purple-400 mb-2" />
-                <p className="text-gray-700 leading-relaxed serif-body italic">
-                  "{review.review}"
-                </p>
-              </div>
-              
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <div>
-                  <p className="font-semibold text-gray-800 serif-heading">
-                    {review.name}
-                  </p>
-                  <p className="text-sm text-gray-500 serif-body">
-                    {review.location}
-                  </p>
-                </div>
-              </div>            </div>
-          ))}
-        </motion.div>
-
-        <motion.div
+              return (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="flex space-x-1 mr-3">
+                      {renderStars(review.rating)}
+                    </div>
+                    <span className="text-sm text-gray-500 serif-body">
+                      {review.service}
+                    </span>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <ChatBubbleLeftEllipsisIcon className="h-6 w-6 text-purple-400 mb-2" />
+                    <p className="text-gray-700 leading-relaxed serif-body italic">
+                      "{review.review}"
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                    <div>
+                      <p className="font-semibold text-gray-800 serif-heading">
+                        {review.name}
+                      </p>
+                      <p className="text-sm text-gray-500 serif-body">
+                        {review.location}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              )
+            }
+            
+            return <ReviewCard key={index} review={review} index={index} />
+          })}
+        </motion.div>        <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-purple-100 to-yellow-100 rounded-2xl p-8 max-w-4xl mx-auto">

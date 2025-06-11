@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import { podcasts } from '../../data/podcasts'
 import PodcastHero from './PodcastHero'
 import PodcastGrid from './PodcastGrid'
+import { useDelayedAnimation } from '../../hooks/useStaggeredAnimation'
 
 export default function PodcastShowcase() {
+  const isLoaded = useDelayedAnimation(200) // Start animations 200ms after component mounts
 
   return (
     <div className="min-h-screen">      {/* Podcasts Section */}
@@ -14,9 +16,8 @@ export default function PodcastShowcase() {
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 serif-heading">
@@ -29,14 +30,11 @@ export default function PodcastShowcase() {
           </motion.div>          {/* Podcast Grid */}
           <PodcastGrid 
             podcasts={podcasts}
-          />
-
-          {/* Call to Action */}
+          />          {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
             className="text-center mt-20 p-12 rounded-3xl"
           >
             <h3 className="text-3xl md:text-4xl font-bold mb-6 serif-heading">

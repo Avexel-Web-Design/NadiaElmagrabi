@@ -124,19 +124,20 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}          <motion.div 
-            className="flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <h1 className="text-2xl font-bold spiritual-gradient serif-heading">
-              Nadia Elmagrabi
-            </h1>
-          </motion.div>          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8 relative" ref={navRef}>              {/* Sliding liquid glass bubble */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <div className="flex justify-between items-center h-16">
+          {/* Logo */}          <Link href="/">
+            <motion.div 
+              className="flex-shrink-0 cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <h1 className="text-2xl font-bold spiritual-gradient serif-heading">
+                Nadia Elmagrabi
+              </h1>
+            </motion.div>
+          </Link>          {/* Desktop Navigation */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex items-baseline space-x-8 relative" ref={navRef}>{/* Sliding liquid glass bubble */}
               <motion.div
                 className="absolute top-0 h-full liquid-glass-strong rounded-full pointer-events-none z-0"
                 initial={false}

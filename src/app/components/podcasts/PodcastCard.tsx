@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { PlayIcon } from '@heroicons/react/24/outline'
 import { use3DCard } from '../../hooks/use3DCard'
 import { Podcast } from '../../data/podcasts'
+import { useStaggeredAnimation } from '../../hooks/useStaggeredAnimation'
 
 interface PodcastCardProps {
   podcast: Podcast;
@@ -10,6 +11,7 @@ interface PodcastCardProps {
 }
 
 export default function PodcastCard({ podcast, index }: PodcastCardProps) {
+  const isVisible = useStaggeredAnimation(index * 150) // Stagger animations by 150ms per card
   const { cardRef, cardProps } = use3DCard({
     maxRotateX: 8,
     maxRotateY: 8,
@@ -38,19 +40,16 @@ export default function PodcastCard({ podcast, index }: PodcastCardProps) {
         return 'bg-gray-100 text-gray-800 border-gray-200'
     }
   }
-
   return (
     <motion.div
       ref={cardRef}
       {...cardProps}
       initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ 
         duration: 0.6, 
-        delay: index * 0.1,
         ease: "easeOut" 
       }}
-      viewport={{ once: true }}
       className="card-3d bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group motion-safe"
     >
       {/* Category Badge */}
