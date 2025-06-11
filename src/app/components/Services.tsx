@@ -20,7 +20,7 @@ export default function Services() {
         "Health & Well-being Insights"
       ],
       buttonText: "Book Human Design Package",
-      externalLink: "https://example.com/human-design-readings",
+      externalLink: "https://www.groupregressionsession.com/offers/MpBD2MqT/checkout",
       gradient: "from-purple-400 to-indigo-600",
       bgGradient: "from-purple-50 to-indigo-50"
     },
@@ -60,7 +60,7 @@ export default function Services() {
         "Ongoing Email Support"
       ],
       buttonText: "Begin Complete Journey",
-      externalLink: "https://example.com/complete-soul-journey",
+      externalLink: "https://www.groupregressionsession.com/offers/Loa3JMLQ/checkout",
       gradient: "from-green-400 to-emerald-600",
       bgGradient: "from-green-50 to-emerald-50",
       popular: true
@@ -203,7 +203,9 @@ export default function Services() {
               Book a complimentary 15-minute consultation to discover which journey 
               will serve your highest good.
             </p>            <motion.a
-              href="mailto:nadia@example.com"
+              href="https://calendly.com/nadiaelmagrabi/15min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-spiritual inline-block motion-safe"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
