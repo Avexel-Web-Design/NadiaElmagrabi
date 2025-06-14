@@ -6,15 +6,15 @@ import { useDailyQuote } from '../hooks/useDailyQuote'
 export default function Footer() {
   const currentYear = new Date().getFullYear()
   const dailyQuote = useDailyQuote()
-
   const socialLinks = [
     { name: 'Instagram', href: '#', icon: '📸' },
     { name: 'Facebook', href: '#', icon: '👤' },
-    { name: 'Email', href: 'mailto:nadia@example.com', icon: '✉️' },  ]
+    { name: 'Email', href: 'mailto:nadia@example.com', icon: '✉️' },
+  ]
 
   return (
     <footer 
-      className="liquid-glass-strong mt-20"
+      className="liquid-glass-strong -mt-107"
       style={{ 
         borderRadius: '30px 30px 0 0',
         borderBottomLeftRadius: '0',

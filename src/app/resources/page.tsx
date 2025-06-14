@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-r from-purple-50 to-yellow-50 pb-107">
       <ResourcesHero />
       <ResourcesShowcase />
     </div>
