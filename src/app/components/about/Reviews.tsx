@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { StarIcon, HeartIcon, ChatBubbleLeftEllipsisIcon } from '@heroicons/react/24/solid'
 import { useDelayedAnimation, useStaggeredAnimation } from '../../hooks/useStaggeredAnimation'
 
@@ -7,46 +8,33 @@ export default function Reviews() {
   const isLoaded = useDelayedAnimation(100) // Start animations 100ms after component mounts
   const reviews = [
     {
-      name: "Sarah M.",
+      name: "Gabriela M.",
       rating: 5,
-      review: "Nadia's reading was incredibly accurate and insightful. She helped me understand patterns in my life that I couldn't see before. Her compassionate guidance gave me the clarity I needed to make important decisions.",
-      service: "Tarot Reading",
-      location: "San Francisco, CA"
+      review: "Working with Nadia has been a wonderful experience for my past life regression therapy. She has a way of delivering the message in a loving and empathetic way to help me navigate past trauma. She brought clarity and perspective while trying to reconcile my current and past life experiences. While the regression session was emotional, the experience with her was reassuring and calming as she created a safe space to manifest and let go! I would do it again!",
+    },    {
+      name: "Julia B.",
+      rating: 5,
+      review: "Before working with Nadia, I had been exploring my lineage to help me understand my inner pain. I wanted to go deeper, so I reached out for a past life regression. The experience was very emotional. What I learned gave me an understanding of my soul's emotional state when I came into this life. I understand my depression and from where it stems. The regression with Nadia was a big piece of the puzzle for me, for which I am truly grateful.",
     },
     {
-      name: "Michael R.",
+      name: "Sarah",
       rating: 5,
-      review: "Working with Nadia has been transformational. Her spiritual guidance helped me through a difficult period in my life. She has a gift for seeing what others cannot and communicating it with such warmth and understanding.",
-      service: "Spiritual Counseling",
-      location: "Austin, TX"
+      review: "Before working with Nadia, I felt stuck—like something deeper needed to be uncovered. Our past life regression session was a breakthrough. The emotional release was powerful, and I finally understood what had been holding me back. Since then, my relationships have shifted, and I’ve been able to heal wounds I didn’t even know I was carrying. Combining Human Design and Akashic Records brought even more clarity. I’m so grateful for Nadia’s wisdom and the beautiful modalities she shares.",
     },
     {
-      name: "Emma L.",
+      name: "Cherie L.",
       rating: 5,
-      review: "I was skeptical at first, but Nadia's energy healing session was profound. I felt a shift immediately and the positive changes have continued weeks later. She creates such a safe and sacred space.",
-      service: "Energy Healing",
-      location: "Portland, OR"
+      review: "I deeply enjoyed my regression with Nadia. It helped me understand and begin releasing trauma and fears I’ve carried in this lifetime. Her professionalism and wisdom are exceptional—she creates a powerful space for healing and insight.",
     },
     {
-      name: "David K.",
+      name: "Ali L.",
       rating: 5,
-      review: "Nadia's astrology reading revealed so much about my life purpose and relationships. Her interpretations were spot-on and delivered with such care. I left feeling empowered and with a clear direction forward.",
-      service: "Astrology Reading",
-      location: "Denver, CO"
+      review: "Working with Nadia feels like lying under your favorite tree, safe and at peace. Her calming presence helped ease my nerves during my first Past Life Regression, and what I discovered—especially seeing myself as a young girl—deepened my understanding of self-love. Her sessions are a powerful tool for healing and self-discovery.",
     },
     {
-      name: "Lisa H.",
+      name: "Jess G.",
       rating: 5,
-      review: "The meditation and mindfulness techniques Nadia taught me have become essential parts of my daily routine. She has a wonderful way of making ancient wisdom accessible and practical for modern life.",
-      service: "Meditation Coaching",
-      location: "Seattle, WA"
-    },
-    {
-      name: "James T.",
-      rating: 5,
-      review: "Nadia helped me reconnect with my spiritual path when I felt completely lost. Her guidance was gentle yet powerful, and she helped me find my way back to my authentic self. Truly grateful for her wisdom.",
-      service: "Spiritual Guidance",
-      location: "Phoenix, AZ"
+      review: "My past life regression with Nadia was a very powerful and enlightening experience. During my session I gained insight into fears and behaviors I have. It was a relief to understand my experiences and my fears. Since meeting with Nadia I have been able to release those fears and have felt more at peace with my place in life.",
     }
   ]
   const renderStars = (rating: number) => {
@@ -98,9 +86,6 @@ export default function Reviews() {
                     <div className="flex space-x-1 mr-3">
                       {renderStars(review.rating)}
                     </div>
-                    <span className="text-sm text-gray-500 serif-body">
-                      {review.service}
-                    </span>
                   </div>
                   
                   <div className="mb-4">
@@ -114,9 +99,6 @@ export default function Reviews() {
                     <div>
                       <p className="font-semibold text-gray-800 serif-heading">
                         {review.name}
-                      </p>
-                      <p className="text-sm text-gray-500 serif-body">
-                        {review.location}
                       </p>
                     </div>
                   </div>
@@ -138,18 +120,19 @@ export default function Reviews() {
               <h3 className="text-2xl font-semibold text-gray-800 serif-heading">
                 Your Journey Awaits
               </h3>
-            </div>
-            <p className="text-gray-600 leading-relaxed serif-body mb-6">
+            </div>            <p className="text-gray-600 leading-relaxed serif-body mb-6">
               Every person's spiritual journey is unique. These experiences reflect the deep 
               transformations possible when we open ourselves to guidance and healing. 
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-purple-600 to-yellow-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 serif-body"
-            >
-              Begin Your Transformation
-            </motion.button>
+            <Link href="/#services">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-yellow-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 serif-body"
+              >
+                Begin Your Transformation
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -166,21 +166,10 @@ export default function Navbar() {
                   </motion.div>
                 </Link>
               ))}
-            </div>
-          </div>
+            </div>          </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <motion.a
-              href="#services"
-              className="btn-spiritual text-sm"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Book Reading
-            </motion.a>
-          </div>          {/* Mobile menu button */}
-          <div className="md:hidden">            <motion.button
+          {/* Mobile menu button */}
+          <div className="md:hidden"><motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:text-purple-800"
               whileHover={{ scale: 1.1 }}
@@ -211,18 +200,8 @@ export default function Navbar() {
                     whileTap={{ scale: 0.95 }}
                   >
                     {item.name}
-                  </motion.div>
-                </Link>
+                  </motion.div>                </Link>
               ))}
-              <motion.a
-                href="#services"
-                className="btn-spiritual w-full text-center block mt-4"
-                onClick={() => setIsMobileMenuOpen(false)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Book Reading
-              </motion.a>
             </div>
           </motion.div>
         )}

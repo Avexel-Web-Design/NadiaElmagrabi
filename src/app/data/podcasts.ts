@@ -32,7 +32,7 @@ export const podcasts: Podcast[] = [
     id: 'your-past-is-your-power',
     title: 'Your Past is Your Power',
     hostName: 'Terri Messenger',
-    description: 'Would you believe me if I told you there is power in your past? In this podcast episode, we dive deep into the importance of feeling safe in your body, how tapping into yourself and listening to your intuition can help you make better decisions, and much more! I also share my story of how past life therapy transformed my relationship with myself and my marriage.',
+    description: 'Would you believe me if I told you there is power in your past? In this podcast episode, we dive deep into the importance of feeling safe in your body, how tapping into yourself and listening to your intuition can help you make better decisions, and much more!',
     listenUrl: 'https://open.spotify.com/episode/6XLIHwsi7mzVoovf7Q1Dvg',
     platform: 'Spotify',
     category: 'Past Life Therapy'

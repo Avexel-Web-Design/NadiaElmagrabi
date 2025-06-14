@@ -36,40 +36,35 @@ export default function PodcastCard({ podcast, index }: PodcastCardProps) {
         return 'bg-blue-100 text-blue-800 border-blue-200'
       case 'Wellness & Self-Care':
         return 'bg-pink-100 text-pink-800 border-pink-200'
-      default:
-        return 'bg-gray-100 text-gray-800 border-gray-200'
+      default:        return 'bg-gray-100 text-gray-800 border-gray-200'
     }
   }
+  
   return (
     <motion.div
       ref={cardRef}
       {...cardProps}
       initial={{ opacity: 0, y: 30 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ 
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}      transition={{ 
         duration: 0.6, 
         ease: "easeOut" 
       }}
-      className="card-3d bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group motion-safe"
+      className="card-3d bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group motion-safe h-[375px] flex flex-col"
     >
       {/* Category Badge */}
       <div className="p-6 pb-4">
         <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${getCategoryColor(podcast.category)}`}>
           {podcast.category}
         </div>
-      </div>
-
-      {/* Content */}
-      <div className="px-6 pb-6">
+      </div>      {/* Content */}
+      <div className="px-6 pb-6 flex-1 flex flex-col">
         <h3 className="text-xl font-bold text-gray-900 mb-2 serif-heading group-hover:text-purple-700 transition-colors duration-300">
           {podcast.title}
         </h3>
-        
-        <p className="text-purple-600 font-medium text-sm mb-3 serif-body">
+          <p className="text-purple-600 font-medium text-sm mb-3 serif-body">
           Hosted by {podcast.hostName}
         </p>
-        
-        <p className="text-gray-600 text-sm leading-relaxed mb-6 serif-body line-clamp-4">
+          <p className="text-gray-600 text-sm leading-relaxed mb-4 serif-body flex-1">
           {podcast.description}
         </p>
         
