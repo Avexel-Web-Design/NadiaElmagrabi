@@ -7,37 +7,38 @@ export default function Education() {
   const isLoaded = useDelayedAnimation(100) // Start animations 100ms after component mounts
   const qualifications = [
     {
-      degree: "Master of Divinity",
-      institution: "Sacred Heart Seminary",
-      year: "2012",
-      focus: "Comparative Religion & Spiritual Counseling",
+      degree: "MA in Clinical and Humanistic Psychology",
+      institution: "Michigan School for Professional Psychology",
+      year: "",
+      focus: "Clinical Psychology & Humanistic Approaches",
       icon: AcademicCapIcon,
       color: "purple"
     },
     {
-      degree: "Bachelor of Arts in Psychology",
-      institution: "University of California, Berkeley",
-      year: "2008",
-      focus: "Transpersonal Psychology & Human Development",
+      degree: "Postgraduate Certificate in Psychoanalytic Psychotherapy",
+      institution: "Michigan Psychoanalytic Institute",
+      year: "",
+      focus: "3-Year Certificate Program",
       icon: TrophyIcon,
       color: "yellow"
     },
     {
-      degree: "Certificate in Holistic Healing",
-      institution: "Institute for Integrative Nutrition",
-      year: "2013",
-      focus: "Mind-Body Connection & Wellness Coaching",
+      degree: "BA in French Language & Literature and Art History",
+      institution: "Western Michigan University",
+      year: "",
+      focus: "Double Major in Languages & Arts",
       icon: SparklesIcon,
       color: "green"
     }
   ]
-
   const additionalTraining = [
-    "Advanced Astrology Studies - Kepler College",
-    "Meditation Teacher Training - Mindfulness Institute",
-    "Energy Healing Certification - Barbara Brennan School",
-    "Shamanic Journeying - Foundation for Shamanic Studies",
-    "Past Life Regression Therapy - Institute for Past Life Therapy"
+    "Past Life Therapy - trained with internationally known therapist and author Carol Bowman",
+    "Certificate of Training for completion of The Human Design Mastermind with Emma Dunwoody",
+    "Certificate of Completion for Living Your Design Course with Jenni Crowther",
+    "Certificate of Completion for Rave ABCs and Rave Cartography with John and Amy of the Human Design Collective",
+    "Intuitive Practitioner Certification - Sacred Balance Academy (Lori Lipton)",
+    "Institute for Integrative Nutrition - Certified Holistic Health & Wellness Coach",
+    "Trauma-Informed Bodywork & Somatic Psychology - Pacific Center for Awareness and Bodywork"
   ]
 
   return (
@@ -53,9 +54,8 @@ export default function Education() {
             <h2 className="text-4xl md:text-5xl font-bold spiritual-gradient serif-heading">
               Education & Training
             </h2>
-          </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-body">
-            A foundation built on academic excellence and spiritual wisdom
+          </div>          <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-body">
+            Nearly 25 years of clinical experience combined with specialized transformational training
           </p>
         </motion.div>        {/* Formal Education */}
         <motion.div 
@@ -131,14 +131,15 @@ export default function Education() {
           transition={{ duration: 0.8, delay: 1.1 }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-purple-600 to-yellow-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4 serif-heading">
-              A Lifetime of Learning
+          <div className="bg-gradient-to-r from-purple-600 to-yellow-600 text-white rounded-2xl p-8 max-w-4xl mx-auto">            <h3 className="text-2xl font-semibold mb-4 serif-heading">
+              A Foundation of Excellence
             </h3>
             <p className="text-lg leading-relaxed serif-body opacity-90">
-              My educational journey reflects a deep commitment to understanding both the scientific 
-              and spiritual aspects of human experience. This unique combination allows me to offer 
-              grounded, compassionate guidance that honors both wisdom traditions and modern insights.
+              My educational journey combines rigorous academic training in psychology and psychotherapy 
+              with specialized expertise in transformational healing modalities. With nearly 25 years of 
+              experience in clinical psychotherapy, plus extensive personal psychoanalysis and professional 
+              supervision, this foundation allows me to offer deep, multidimensional support that honors 
+              both traditional therapeutic approaches and innovative healing practices.
             </p>
           </div>
         </motion.div>

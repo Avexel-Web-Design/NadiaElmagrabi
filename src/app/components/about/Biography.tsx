@@ -28,20 +28,18 @@ export default function Biography() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col"
           >
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg flex-1">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4 serif-heading">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg flex-1">              <h3 className="text-2xl font-semibold text-gray-800 mb-4 serif-heading">
                 My Spiritual Journey
               </h3>
               <p className="text-gray-600 leading-relaxed serif-body mb-4">
-                For over a decade, I have been deeply immersed in the world of spiritual guidance, 
-                helping individuals discover their true path and purpose. My journey began with my 
-                own spiritual awakening, which led me to explore various healing modalities and 
-                divination practices.
+                I wasn't raised with any specific religion or talk about spirituality. However, a 
+                spontaneous spiritual awakening at the age of 20 sparked a lifelong journey of healing, 
+                self-discovery, and a profound exploration of metaphysics and the nature of consciousness.
               </p>
               <p className="text-gray-600 leading-relaxed serif-body">
-                Through years of study and practice, I have developed a unique approach that combines 
-                traditional wisdom with modern understanding, creating a safe space for transformation 
-                and growth.
+                Over the past 35 years, I've immersed myself in a wide range of modalities, from my 
+                MA in Clinical and Humanistic Psychology to training in Past Life Therapy with Carol Bowman, 
+                advanced Human Design training, and certification in intuitive development.
               </p>
             </div>
           </motion.div>          <motion.div
@@ -50,18 +48,18 @@ export default function Biography() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col"
           >
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg flex-1">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4 serif-heading">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg flex-1">              <h3 className="text-2xl font-semibold text-gray-800 mb-4 serif-heading">
                 My Mission
               </h3>
               <p className="text-gray-600 leading-relaxed serif-body mb-4">
-                I believe that everyone has the power to transform their life and connect with their 
-                highest self. My mission is to guide you through this transformative process with 
-                compassion, wisdom, and authenticity.
+                I help women break through the invisible patterns that keep them stuck—ancestral wounds, 
+                past-life imprints, limiting beliefs, and outdated roles—so they can step into their 
+                soul's highest expression.
               </p>
               <p className="text-gray-600 leading-relaxed serif-body">
-                Whether you're seeking clarity in relationships, career guidance, or spiritual growth, 
-                I am here to help you unlock the answers that already exist within you.
+                With nearly 25 years of experience as an intuitive psychotherapist and expertise in 
+                Past Life Therapy, ancestral healing, Human Design, and embodied energetics, I guide 
+                women through deep, multidimensional transformation.
               </p>
             </div>
           </motion.div>
