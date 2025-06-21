@@ -25,7 +25,7 @@ export default function Services() {
       bgGradient: "from-purple-50 to-indigo-50"
     },
     {
-      id: 2,
+      id: 3,
       title: "Past Life Regression",
       subtitle: "Session + Follow-up",
       icon: <EyeIcon className="h-8 w-8" />,
@@ -45,7 +45,7 @@ export default function Services() {
       bgGradient: "from-yellow-50 to-orange-50"
     },
     {
-      id: 3,
+      id: 2,
       title: "Complete Soul Journey",
       subtitle: "Human Design + Regression",
       icon: <GiftIcon className="h-8 w-8" />,
