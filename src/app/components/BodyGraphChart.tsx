@@ -26,7 +26,7 @@ export default function BodyGraphChart() {
 
   return (
     <section id="bodygraph" className="py-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-yellow-50 to-green-50 opacity-70"></div>
+      <div className="absolute inset-0"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -59,10 +59,6 @@ export default function BodyGraphChart() {
             ref={bodyGraphRef} 
             className="w-full min-h-[600px] flex items-center justify-center"
           >
-            {/* The script will embed the Body Graph Chart here */}
-            <div className="text-center py-8">
-              <p className="text-gray-500">Loading Body Graph Chart...</p>
-            </div>
           </div>
         </motion.div>
       </div>
