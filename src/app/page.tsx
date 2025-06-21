@@ -6,7 +6,7 @@ import BodyGraphChart from './components/BodyGraphChart'
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden pb-107">
       <Hero />
       <About />
       <BodyGraphChart />

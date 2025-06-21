@@ -10,6 +10,7 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', href: '/', id: 'home' },
     { name: 'About', href: '/about', id: 'about' },
+    { name: 'Resources', href: '/resources', id: 'resources' },
   ]
   
   // Helper function to normalize pathname for matching
@@ -46,10 +47,9 @@ export default function Navbar() {
   
   useEffect(() => {
     setIsLoaded(true)
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+    const handleScroll = () => {      setIsScrolled(window.scrollY > 10)
         // Detect current section
-      const sections = ['home', 'about']
+      const sections = ['home', 'about', 'resources']
       const scrollY = window.scrollY + 100 // Offset for navbar height
       
       for (const sectionId of sections) {
@@ -124,19 +124,20 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}          <motion.div 
-            className="flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <h1 className="text-2xl font-bold spiritual-gradient serif-heading">
-              Nadia Elmagrabi
-            </h1>
-          </motion.div>          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8 relative" ref={navRef}>              {/* Sliding liquid glass bubble */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <div className="flex justify-between items-center h-16">
+          {/* Logo */}          <Link href="/">
+            <motion.div 
+              className="flex-shrink-0 cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <h1 className="text-2xl font-bold spiritual-gradient serif-heading">
+                Nadia Elmagrabi
+              </h1>
+            </motion.div>
+          </Link>          {/* Desktop Navigation */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex items-baseline space-x-8 relative" ref={navRef}>{/* Sliding liquid glass bubble */}
               <motion.div
                 className="absolute top-0 h-full liquid-glass-strong rounded-full pointer-events-none z-0"
                 initial={false}
@@ -165,21 +166,10 @@ export default function Navbar() {
                   </motion.div>
                 </Link>
               ))}
-            </div>
-          </div>
+            </div>          </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <motion.a
-              href="#services"
-              className="btn-spiritual text-sm"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Book Reading
-            </motion.a>
-          </div>          {/* Mobile menu button */}
-          <div className="md:hidden">            <motion.button
+          {/* Mobile menu button */}
+          <div className="md:hidden"><motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:text-purple-800"
               whileHover={{ scale: 1.1 }}
@@ -210,18 +200,8 @@ export default function Navbar() {
                     whileTap={{ scale: 0.95 }}
                   >
                     {item.name}
-                  </motion.div>
-                </Link>
+                  </motion.div>                </Link>
               ))}
-              <motion.a
-                href="#services"
-                className="btn-spiritual w-full text-center block mt-4"
-                onClick={() => setIsMobileMenuOpen(false)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Book Reading
-              </motion.a>
             </div>
           </motion.div>
         )}
