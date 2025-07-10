@@ -46,8 +46,10 @@ export default function Navbar() {
   }, [pathname, navItems])
   
   useEffect(() => {
+    console.log('Setting isLoaded to true')
     setIsLoaded(true)
-    const handleScroll = () => {      setIsScrolled(window.scrollY > 10)
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
         // Detect current section
       const sections = ['home', 'about', 'resources']
       const scrollY = window.scrollY + 100 // Offset for navbar height
@@ -118,14 +120,17 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handleResize)
   }, [activeSection, isLoaded, navItems])
   
-  return (    <motion.nav
+  return (
+    <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={isLoaded ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">        <div className="flex justify-between items-center h-16">
-          {/* Logo */}          <Link href="/">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/">
             <motion.div 
               className="flex-shrink-0 cursor-pointer"
               whileHover={{ scale: 1.05 }}
@@ -135,9 +140,12 @@ export default function Navbar() {
                 Nadia Elmagrabi
               </h1>
             </motion.div>
-          </Link>          {/* Desktop Navigation */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
-            <div className="flex items-baseline space-x-8 relative" ref={navRef}>{/* Sliding liquid glass bubble */}
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="block max-md:hidden md:block absolute left-1/2 transform -translate-x-1/2">
+            <div className="flex items-baseline space-x-8 relative" ref={navRef}>
+              {/* Sliding liquid glass bubble */}
               <motion.div
                 className="absolute top-0 h-full liquid-glass-strong rounded-full pointer-events-none z-0"
                 initial={false}
@@ -152,7 +160,8 @@ export default function Navbar() {
                   mass: 0.8,
                 }}
               />
-                {navItems.map((item, index) => (
+              
+              {navItems.map((item, index) => (
                 <Link key={item.name} href={item.href}>
                   <motion.div
                     className={`text-gray-700 hover:text-purple-800 px-3 py-2 rounded-md text-sm font-medium relative group serif-body z-10 transition-colors duration-300 cursor-pointer ${
@@ -166,10 +175,12 @@ export default function Navbar() {
                   </motion.div>
                 </Link>
               ))}
-            </div>          </div>
+            </div>
+          </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden"><motion.button
+          <div className="md:hidden">
+            <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:text-purple-800"
               whileHover={{ scale: 1.1 }}
@@ -183,15 +194,19 @@ export default function Navbar() {
             </motion.button>
           </div>
         </div>
-      </div>      {/* Mobile Navigation Menu */}
+      </div>
+      
+      {/* Mobile Navigation Menu */}
       <AnimatePresence>
-        {isMobileMenuOpen && (            <motion.div
+        {isMobileMenuOpen && (
+          <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden bg-white/90 backdrop-blur-sm mx-4 my-2 rounded-2xl overflow-hidden shadow-lg"
             >
-            <div className="px-2 pt-2 pb-3 space-y-1">              {navItems.map((item) => (
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navItems.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <motion.div
                     className="text-gray-700 hover:text-purple-800 block px-3 py-2 rounded-md text-base font-medium serif-body cursor-pointer"
@@ -200,7 +215,8 @@ export default function Navbar() {
                     whileTap={{ scale: 0.95 }}
                   >
                     {item.name}
-                  </motion.div>                </Link>
+                  </motion.div>
+                </Link>
               ))}
             </div>
           </motion.div>
