@@ -8,15 +8,15 @@ export default function Contact() {
       icon: <EnvelopeIcon className="h-6 w-6" />,
       title: "Email",
       description: "Send me your questions",
-      contact: "nadia@example.com",
-      href: "mailto:nadia@example.com"
+      contact: "hello@nadiaelmagrabi.com",
+      href: "mailto:hello@nadiaelmagrabi.com"
     },
     {
       icon: <PhoneIcon className="h-6 w-6" />,
-      title: "Phone",
-      description: "Call for urgent matters",
-      contact: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      title: "Free Consultation",
+      description: "15-minute discovery call",
+      contact: "Schedule Online",
+      href: "https://calendly.com/nadiaelmagrabi/15min"
     },
     {
       icon: <MapPinIcon className="h-6 w-6" />,
@@ -41,8 +41,8 @@ export default function Contact() {
         ><h2 className="text-4xl md:text-5xl font-bold mb-6 serif-heading">
             <span className="spiritual-gradient">Begin Your Journey</span>
           </h2>          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed serif-body">
-            Ready to unlock the mysteries of your soul? I&apos;m here to guide you 
-            every step of the way. Reach out and let&apos;s start your transformation today.
+            Ready to break free from invisible patterns and step into your soul&apos;s 
+            highest expression? Let&apos;s explore what&apos;s possible for you.
           </p>
         </motion.div>
 
@@ -104,8 +104,8 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                 viewport={{ once: true }}
               >                <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                  &ldquo;The cave you fear to enter holds the treasure you seek. 
-                  Let me help you find the courage to discover your inner gold.&rdquo;
+                  &ldquo;You are meant for so much more than survival. You are meant to 
+                  thrive fully, joyfully, and in alignment with your soul&apos;s truth.&rdquo;
                 </blockquote>
                 <cite className="block mt-4 text-right text-gray-500 font-medium">
                   — Nadia Elmagrabi
@@ -181,9 +181,9 @@ export default function Contact() {
                   </label>
                   <select className="w-full liquid-glass-card px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-purple-400 focus:outline-none transition-all serif-body">
                     <option>Select a service</option>
-                    <option>Human Design Readings</option>
-                    <option>Past Life Regression</option>
-                    <option>Complete Soul Journey</option>
+                    <option>ALIGN: Human Design Journey</option>
+                    <option>Awaken with Past Life Therapy</option>
+                    <option>Embody Your Soul's Purpose</option>
                     <option>Free Consultation</option>
                   </select>
                 </motion.div>                <motion.div

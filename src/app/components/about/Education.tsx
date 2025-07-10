@@ -50,7 +50,6 @@ export default function Education() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
-            <AcademicCapIcon className="h-8 w-8 text-purple-600 mr-2" />
             <h2 className="text-4xl md:text-5xl font-bold spiritual-gradient serif-heading">
               Education & Training
             </h2>
@@ -73,7 +72,18 @@ export default function Education() {
               return (
                 <div
                   key={index}
-                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg transform"
+                  style={{
+                    transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-8px) scale(1.05)'
+                    e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0px) scale(1)'
+                    e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                  }}
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${qual.color}-100 mb-4`}>
                     <IconComponent className={`h-6 w-6 text-${qual.color}-600`} />

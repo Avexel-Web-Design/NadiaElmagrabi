@@ -57,7 +57,6 @@ export default function Reviews() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
-            <HeartIcon className="h-8 w-8 text-purple-600 mr-2" />
             <h2 className="text-4xl md:text-5xl font-bold spiritual-gradient serif-heading">
               Client Experiences
             </h2>
@@ -116,7 +115,6 @@ export default function Reviews() {
         >
           <div className="bg-gradient-to-r from-purple-100 to-yellow-100 rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-4">
-              <HeartIcon className="h-6 w-6 text-red-500 mr-2" />
               <h3 className="text-2xl font-semibold text-gray-800 serif-heading">
                 Your Journey Awaits
               </h3>

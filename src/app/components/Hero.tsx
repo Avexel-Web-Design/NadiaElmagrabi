@@ -109,11 +109,19 @@ export default function Hero() {
         </div>
       </div>      {/* Gradient Transition to About Section */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-purple-50/30 to-purple-50/60 pointer-events-none z-5"></div>      {/* Scroll Indicator */}      <motion.div 
-        className="absolute bottom-16 left-1/2 transform -translate-x-1/2 motion-safe z-20"
+        className="absolute bottom-16 left-1/2 transform -translate-x-1/2 motion-safe z-20 cursor-pointer"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         style={{ willChange: 'transform' }}
-      ><div className="liquid-glass-ultra p-3 rounded-full">
+        onClick={() => {
+          const nextSection = document.querySelector('#about');
+          if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      ><div className="liquid-glass-ultra p-3 rounded-full hover:liquid-glass-strong transition-all duration-300">
           <FontAwesomeIcon 
             icon={faArrowDown} 
             className="text-2xl text-purple-600" 

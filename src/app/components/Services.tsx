@@ -10,16 +10,16 @@ export default function Services() {
       subtitle: "3 Comprehensive Sessions",
       icon: <StarIcon className="h-8 w-8" />,
       price: "Transform Your Life",
-      description: "Dive deep into your energetic blueprint with three detailed Human Design sessions that will revolutionize how you understand yourself.",
+      description: "An immersive Human Design experience to help you tune into your authentic energy, release conditioning, and navigate relationships with clarity and ease.",
       features: [
         "Complete Human Design Chart Analysis",
         "Your Energy Type & Strategy",
-        "Authority & Decision Making",
-        "Life Purpose & Career Guidance",
-        "Relationship Dynamics",
-        "Health & Well-being Insights"
+        "Authority & Decision Making Process",
+        "Relationship Dynamics & Communication",
+        "Release Patterns That Aren't Yours",
+        "Step Into Your Highest Expression"
       ],
-      buttonText: "Book Human Design Package",
+      buttonText: "Book Your First Step Forward",
       externalLink: "https://www.groupregressionsession.com/offers/MpBD2MqT/checkout",
       gradient: "from-purple-400 to-indigo-600",
       bgGradient: "from-purple-50 to-indigo-50"
@@ -27,37 +27,37 @@ export default function Services() {
     {
       id: 3,
       title: "Past Life Regression",
-      subtitle: "Session + Follow-up",
+      subtitle: "Session + Follow-Up",
       icon: <EyeIcon className="h-8 w-8" />,
-      price: "Heal Ancient Wounds",
-      description: "Journey into your soul's history with a guided regression session followed by integration support to heal and transform.",
+      price: "Transmute the Past",
+      description: "A psychotherapy-informed, intuitive process to release unconscious imprints—ancestral, karmic, and past life—that still shape your relationships and choices today.",
       features: [
         "Deep Past Life Regression Session",
-        "Soul Pattern Recognition",
-        "Karma & Life Lesson Insights",
-        "Healing Trauma Across Lifetimes",
-        "Follow-up Integration Session",
-        "Personalized Healing Plan"
+        "Ancestral & Karmic Pattern Release",
+        "Unconscious Imprint Healing",
+        "Integration & Soul-Level Healing",
+        "Greater Freedom & Clarity",
+        "Awakened Possibilities"
       ],
-      buttonText: "Book Regression Journey",
-      externalLink: "https://example.com/past-life-regression",
+      buttonText: "Start Your Journey",
+      externalLink: "https://www.groupregressionsession.com/offers/past-life-therapy",
       gradient: "from-yellow-400 to-orange-600",
       bgGradient: "from-yellow-50 to-orange-50"
     },
     {
       id: 2,
-      title: "Complete Soul Journey",
-      subtitle: "Human Design + Regression",
+      title: "Embody Your Soul's Purpose",
+      subtitle: "Complete Transformational Journey",
       icon: <GiftIcon className="h-8 w-8" />,
-      price: "Ultimate Transformation",
-      description: "The most comprehensive spiritual experience combining both Human Design readings and Past Life Regression for complete soul alignment.",
+      price: "Break Free & Live Aligned",
+      description: "A transformative journey combining Human Design, Past Life Regression, and intuitive development to release invisible patterns and align with your soul's truth.",
       features: [
-        "All Human Design Sessions (3)",
-        "Past Life Regression + Follow-up",
-        "Soul Blueprint Integration",
-        "Lifetime Patterns Analysis",
-        "Spiritual Purpose Clarity",
-        "Ongoing Email Support"
+        "Human Design Sessions (3)",
+        "Past Life Regression Therapy",
+        "Intuitive Development Training",
+        "Release Old Conditioning",
+        "Reclaim Voice, Power & Authenticity",
+        "Align Fully with Soul's Purpose"
       ],
       buttonText: "Begin Complete Journey",
       externalLink: "https://www.groupregressionsession.com/offers/Loa3JMLQ/checkout",
@@ -78,12 +78,12 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-        ><h2 className="text-4xl md:text-5xl font-bold mb-6 serif-heading">
-            <span className="spiritual-gradient">Sacred Offerings</span>
+        >        <h2 className="text-4xl md:text-5xl font-bold mb-6 serif-heading">
+            <span className="spiritual-gradient">Which Path is Calling You?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed serif-body">
-            Choose your path to spiritual awakening. Each journey is designed to unlock 
-            the deepest wisdom of your soul and guide you toward your most authentic life.
+            Choose your path to transformation. Each journey is designed to help you 
+            break free from invisible patterns and align with your soul's highest expression.
           </p>
         </motion.div>
 
@@ -201,7 +201,7 @@ export default function Services() {
             </h3>
             <p className="text-gray-600 mb-6 serif-body">
               Book a complimentary 15-minute consultation to discover which journey 
-              will serve your highest good.
+              will serve your highest good and help you step into your most aligned life.
             </p>            <motion.a
               href="https://calendly.com/nadiaelmagrabi/15min"
               target="_blank"

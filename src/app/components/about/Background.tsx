@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import { AcademicCapIcon, BookOpenIcon, StarIcon } from '@heroicons/react/24/outline'
 import { useDelayedAnimation, useStaggeredAnimation } from '../../hooks/useStaggeredAnimation'
 
 export default function Background() {
@@ -8,28 +7,28 @@ export default function Background() {
   
   const experiences = [
     {
-      title: "Spiritual Counseling Certification",
-      organization: "International Association of Spiritual Counselors",
-      year: "2018",
-      description: "Advanced certification in spiritual guidance and energy healing practices"
+      title: "Past Life Therapy Training",
+      organization: "Trained with Carol Bowman",
+      year: "",
+      description: "Intensive training with internationally known therapist and author Carol Bowman in Past Life Therapy techniques"
     },
     {
-      title: "Tarot Master Practitioner",
-      organization: "Tarot Certification Board",
-      year: "2016",
-      description: "Comprehensive training in multiple tarot systems and divination techniques"
+      title: "Human Design Mastermind",
+      organization: "Training with Emma Dunwoody",
+      year: "",
+      description: "Certificate of Training for completion of The Human Design Mastermind program"
     },
     {
-      title: "Reiki Master/Teacher",
-      organization: "Usui Reiki System",
-      year: "2015",
-      description: "Master level attunement and certification to teach Reiki healing"
+      title: "Trauma-Informed Bodywork",
+      organization: "Pacific Center for Awareness and Bodywork",
+      year: "",
+      description: "Specialized training in trauma-informed bodywork and somatic psychology approaches"
     },
     {
-      title: "Crystal Healing Practitioner",
-      organization: "Crystal Therapy Institute",
-      year: "2014",
-      description: "Specialized training in crystal properties and healing applications"
+      title: "Intuitive Practitioner Certification",
+      organization: "Sacred Balance Academy",
+      year: "",
+      description: "Certification in intuitive development and embodied energetics with Lori Lipton"
     }
   ]
 
@@ -42,13 +41,12 @@ export default function Background() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
-            <BookOpenIcon className="h-8 w-8 text-purple-600 mr-2" />
             <h2 className="text-4xl md:text-5xl font-bold spiritual-gradient serif-heading">
               Professional Background
             </h2>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-body">
-            Years of dedicated study and practice in spiritual healing arts
+            Specialized training and certifications in transformational healing modalities
           </p>
         </motion.div>        <div className="grid md:grid-cols-2 gap-8">
           {experiences.map((experience, index) => {
@@ -92,16 +90,16 @@ export default function Background() {
         >
           <div className="bg-gradient-to-r from-purple-100 to-yellow-100 rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-4">
-              <StarIcon className="h-6 w-6 text-yellow-600 mr-2" />
               <h3 className="text-2xl font-semibold text-gray-800 serif-heading">
                 Continuous Learning
               </h3>
             </div>
             <p className="text-gray-600 leading-relaxed serif-body">
-              My spiritual journey is one of constant growth and learning. I regularly attend workshops, 
-              retreats, and advanced training programs to deepen my understanding and expand my healing 
-              abilities. This commitment to ongoing education ensures that I can offer you the most 
-              effective and transformative guidance possible.
+              My path has been holistic and multidimensional from the start—mind, body, spirit, and 
+              lineage. I regularly continue my education through workshops, advanced training programs, 
+              and supervision to deepen my understanding and expand my healing abilities. This commitment 
+              to ongoing learning ensures that I can offer you the most effective and transformative 
+              guidance possible.
             </p>
           </div>
         </motion.div>

@@ -12,9 +12,9 @@ export default function About() {
   })
 
   const credentials = [
-    { icon: <AcademicCapIcon className="h-6 w-6" />, text: "Certified Human Design Analyst" },
-    { icon: <StarIcon className="h-6 w-6" />, text: "Past Life Regression Therapist" },
-    { icon: <GlobeAltIcon className="h-6 w-6" />, text: "Energy Healing Practitioner" }
+    { icon: <AcademicCapIcon className="h-6 w-6" />, text: "MA in Clinical and Humanistic Psychology" },
+    { icon: <StarIcon className="h-6 w-6" />, text: "Past Life Therapy Training with Carol Bowman" },
+    { icon: <GlobeAltIcon className="h-6 w-6" />, text: "Advanced Human Design Training" }
   ]
 
   return (    <section id="about" className="py-20 relative overflow-hidden">      {/* Background Elements */}
@@ -47,21 +47,20 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >              <p>
-                For over a decade, I&apos;ve been privileged to guide souls on their journey 
-                of self-discovery and spiritual awakening. My path began with my own 
-                profound transformation through Human Design, which revealed the 
-                authentic blueprint of my being.
+                For nearly 25 years, I&apos;ve helped people break free from the unseen 
+                patterns that hold them back—past-life imprints, ancestral trauma, 
+                and conditioned beliefs—so they can embody their truth and live with purpose.
               </p>
                 <p>
-                Through Past Life Regression, I&apos;ve witnessed countless individuals 
-                heal ancient wounds, understand recurring patterns, and step into 
-                their true power. Each session is a sacred space where your soul&apos;s 
-                wisdom unfolds naturally.
+                My clients are smart, capable, and successful on the outside, but feel 
+                a deeper calling within. Through a blend of psychotherapy, past-life 
+                healing, Human Design, and intuitive guidance, I help them release 
+                what isn&apos;t theirs and reclaim their true selves.
               </p>
                 <p>
-                My approach combines ancient wisdom with modern understanding, 
-                creating a bridge between your cosmic design and earthly experience. 
-                Together, we&apos;ll unlock the keys to your most authentic, fulfilling life.
+                This is more than healing. It&apos;s liberation. It&apos;s coming home to yourself. 
+                Together, we&apos;ll connect the dots between past and present, so you can 
+                align your life with who you are truly here to be.
               </p>
             </motion.div>
 
@@ -114,7 +113,7 @@ export default function About() {
                     Nadia Elmagrabi
                   </p>
                   <p className="text-white/90 text-sm serif-body">
-                    Soul Guide & Healer
+                    Transformational Guide & Intuitive Psychotherapist
                   </p>
                 </div>
               </div>
@@ -127,11 +126,12 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
             >              <blockquote className="text-gray-600 italic mb-3 serif-body">
-                &ldquo;Nadia&apos;s guidance transformed my understanding of myself. 
-                The Human Design reading was like receiving a manual for my soul.&rdquo;
+                &ldquo;Working with Nadia helped me connect the dots between my current 
+                fears and relationships and the emotional imprint of my past lives. 
+                This experience was a powerful piece of my healing journey.&rdquo;
               </blockquote>
               <cite className="text-sm text-gray-500 font-medium serif-body">
-                — Sarah M., Spiritual Seeker
+                — Julia B.
               </cite>
             </motion.div>
           </motion.div>

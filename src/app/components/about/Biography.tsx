@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import { SparklesIcon } from '@heroicons/react/24/outline'
 
 export default function Biography() {
   return (
@@ -13,13 +12,12 @@ export default function Biography() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-4">
-            <SparklesIcon className="h-8 w-8 text-purple-600 mr-2" />
             <h2 className="text-4xl md:text-5xl font-bold spiritual-gradient serif-heading">
               About Me
             </h2>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto serif-body">
-            Discover the journey that led me to spiritual guidance and healing
+            Transformational Guide | Intuitive Psychotherapist | Specialist in Past Life Healing, Ancestral Work & Human Design
           </p>
         </motion.div>        <div className="grid md:grid-cols-2 gap-12 items-stretch">
           <motion.div

@@ -4,9 +4,9 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Nadia Elmagrabi - Human Design & Past Life Regression',
-  description: 'Discover your true self through Human Design readings and Past Life Regression sessions with Nadia Elmagrabi. Transform your spiritual journey today.',
-  keywords: 'human design, past life regression, spiritual guidance, soul purpose, energy healing',
+  title: 'Nadia Elmagrabi - Transformational Guide | Intuitive Psychotherapist',
+  description: 'Break free from invisible patterns with Nadia Elmagrabi. Specialist in Past Life Healing, Ancestral Work & Human Design. Nearly 25 years of experience in transformational guidance.',
+  keywords: 'nadia elmagrabi, past life therapy, human design, ancestral healing, transformational guide, intuitive psychotherapist, carol bowman',
 }
 
 export default function RootLayout({
