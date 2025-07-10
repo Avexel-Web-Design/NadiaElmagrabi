@@ -38,44 +38,65 @@ export default function Hero() {
           </motion.div>
 
           {/* Feature Cards */}          <motion.div 
-            className="grid md:grid-cols-3 gap-6 mb-12 motion-safe"
+            className="grid md:grid-cols-3 gap-8 mb-12 motion-safe"
             initial={{ opacity: 0, y: 20 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           >
             {[
               {
-                icon: <SparklesIcon className="h-8 w-8" />,
+                icon: <SparklesIcon className="h-10 w-10" />,
                 title: "Human Design",
-                description: "Decode your energetic blueprint"
+                description: "Decode your energetic blueprint",
+                gradient: "from-purple-400 to-indigo-600",
+                bgGradient: "from-purple-50 to-indigo-50"
               },
               {
-                icon: <EyeIcon className="h-8 w-8" />,
+                icon: <EyeIcon className="h-10 w-10" />,
                 title: "Past Life Regression",
-                description: "Heal through ancient wisdom"
+                description: "Heal through ancient wisdom",
+                gradient: "from-yellow-400 to-orange-600",
+                bgGradient: "from-yellow-50 to-orange-50"
               },
               {
-                icon: <HeartIcon className="h-8 w-8" />,
+                icon: <HeartIcon className="h-10 w-10" />,
                 title: "Soul Guidance",
-                description: "Transform your spiritual journey"
-              }            ].map((feature) => (              <motion.div
+                description: "Transform your spiritual journey",
+                gradient: "from-green-400 to-emerald-600",
+                bgGradient: "from-green-50 to-emerald-50"
+              }            ].map((feature, index) => (              <motion.div
                 key={feature.title}
-                className="liquid-glass-card p-6 rounded-2xl group"
-                whileHover={{ scale: 1.02 }}
+                className="hero-feature-card liquid-glass-card p-8 rounded-3xl group relative overflow-hidden"
+                whileHover={{ scale: 1.03, y: -5 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 style={{ transformOrigin: 'center' }}
               >
-                <div className="text-purple-600 mb-4 group-hover:text-yellow-600 transition-colors">
-                  {feature.icon}
+                {/* Background Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-30 transition-opacity duration-500 rounded-3xl`}></div>
+                
+                {/* Icon Container */}
+                <div className="relative z-10 mb-6">
+                  <div className={`hero-icon-container inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} shadow-lg`}>
+                    <div className="text-white drop-shadow-sm">
+                      {feature.icon}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 serif-heading">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm serif-body">
-                  {feature.description}
-                </p>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 serif-heading group-hover:text-gray-900 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 text-base serif-body leading-relaxed group-hover:text-gray-700 transition-colors">
+                    {feature.description}
+                  </p>
+                </div>
+                
+                {/* Decorative Element */}
+                <div className="absolute top-4 right-4 w-20 h-20 rounded-full bg-gradient-to-br from-white/20 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </motion.div>
             ))}
           </motion.div>
